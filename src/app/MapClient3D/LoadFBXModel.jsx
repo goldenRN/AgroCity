@@ -43,7 +43,7 @@ export default function LoadFBXModel() {
     // === Load model ===
     const loader = new FBXLoader();
     loader.load(
-      "/models/nogoon_baiguulamj.fbx",
+      "/models/test10.fbx",
       (object) => {
         object.scale.set(0.1, 0.1, 0.1);
         scene.add(object);

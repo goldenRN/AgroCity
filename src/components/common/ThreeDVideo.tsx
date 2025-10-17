@@ -6,50 +6,56 @@ import LoadFBXModel from '@/app/MapClient3D/LoadFBXModel'; // эсвэл тан�
 import DiagonalBottomRibbon60deg from '../DiagonalRibbon'
 import Link from 'next/link'
 const stats = [
-    { value: '24,022 га', label: 'Нийт талбайн хэмжээ' },
+    { value: '24.022 га', label: 'Талбайн хэмжээ' },
     { value: '132 км', label: 'Асфальтан зам' },
     { value: '114.9 км', label: 'Төмөр зам' },
-    { value: '11,912', label: 'Газар эзэмшигч' },
-    { value: '14,917', label: 'Газар өмчлөгч' },
+    { value: '11.912', label: 'Газар эзэмшигч' },
+    { value: '14.917', label: 'Газар өмчлөгч' },
 ]
 const ThreeDVideo = () => {
     const [showModel, setShowModel] = useState(false);
     return (
-        <div className='relative bg-white h-200' >
-            <div className='flex flex-column md:grid-cols-5 h-130 bg-[#e4f4fb]'>
-                <div className=" w-2/5 mx-auto pt-24 pb-5 p-5 relative bg-[#e4f4fb]">
-                    <div className="flex flex-col items-center text-center">
-                        <h1 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
+        <div className='relative bg-white h-250 ' >
+            <div className='flex flex-column md:grid-cols-5 h-150 p-10 bg-green-50'>
+                <div className=" w-2/5 mx-auto pt-24 pb-5 relative bg-green-50">
+                    <div className="flex flex-col items-left text-left pr-5">
+                        <h1 className=" md:text-6xl text-black uppercase" style={{ fontFamily: 'RobotoBold' }}>
                             AgroCity 3D загвар
                         </h1>
-                        <p className="text-2xl md:text-2xl font-normal text-slate-500 leading-tight">
+                        <p className="text-2xl md:text-2xl  text-green-950  pt-5" style={{ fontFamily: 'RobotoBold' }}>
                             3D дижитал ихэр хот
                         </p>
-                        <p className="mt-4 max-w-2xl text-lg md:text-xl text-slate-700">
+                        <p className="mt-5 max-w-2xl text-lg md:text-xl text-black-700 " style={{ fontFamily: 'RobotoRegular' }}>
                             AgroCity-ийн 3D дижитал ихэр нь ухаалаг хөдөө аж ахуйн орон зайн шийдвэр гаргах шинэ түвшнийг нээж өгнө. Бодит мэдээлэлд тулгуурлан төлөвлө, дүн шинжил, эрсдэлээ бууруул.
                         </p>
-
-                        <div className="mt-6 flex gap-3 items-center flex-center">
-
-                            {/* <button
-                                onClick={() => setShowModel(true)}
-                                className="inline-flex items-center gap-2 border border-[#306c12] px-10 py-3 rounded-xl text-slate-800 bg-white/70 hover:bg-white transition"
-                            >
-                                3D үзэх
-                            </button> */}
-                            <Link
-                                href="/MapClient3D"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 border border-[#306c12] px-10 py-3 rounded-xl text-slate-800 bg-white/70 hover:bg-white transition"
-                            >
-                                3D үзэх
-                            </Link>
+                        <div className='flex flex-row '>
+                            <div className="mt-5 flex gap-3 items-center flex-center">
+                                <Link
+                                    href="/MapClient3D"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{ fontFamily: 'RobotoBold' }}
+                                    className="inline-flex items-center gap-2 border px-10 py-3 border-lime-700 rounded-md text-white bg-lime-700 hover:bg-lime-700/70 transition "
+                                >
+                                    3D үзэх
+                                </Link>
+                            </div>
+                            <div className="mt-5 flex gap-3 items-center flex-center pl-5">
+                                <Link
+                                    href="/MapClient3D"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{ fontFamily: 'RobotoBold' }}
+                                    className="inline-flex items-center gap-2 border border-lime-700 px-10 py-3 rounded-md text-green-950 bg-green-50 hover:bg-green-100 transition"
+                                >
+                                    2D үзэх
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div className=" bg-color-[#e4f4fb] w-3/5 h-150 p-15 pt-10">
+                <div className=" bg-green-50 w-3/5 pt-10">
 
                     <iframe
                         className="w-full aspect-video"
@@ -60,17 +66,17 @@ const ThreeDVideo = () => {
                     />
                 </div>
             </div>
-            <div className="w-full bg-[#e4f4fb]">
+            <div className="w-full h-50 bg-green-50 pl-10 pr-10 pt-10">
                 <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
                     {stats.map((item, index) => (
                         <div
                             key={index}
                             className="flex flex-col items-center justify-center py-3 "
                         >
-                            <p className="text-4xl md:text-3xl font-semibold text-green-800">
+                            <p className=" md:text-4xl text-green-950" style={{ fontFamily: 'RobotoBold' }}>
                                 {item.value}
                             </p>
-                            <p className="mt-2 text-slate-600 text-sm md:text-base">
+                            <p className="mt-1 text-green-950 md:text-base uppercase" style={{ fontFamily: 'RobotoRegular' }}>
                                 {item.label}
                             </p>
                         </div>
@@ -80,12 +86,12 @@ const ThreeDVideo = () => {
 
             <div className="absolute left-0 right-0 bottom-0 z-10 pointer-events-none">
                 <DiagonalBottomRibbon60deg
-                    height={200}
+                    height={250}
                     diagonalHeight={150}
                     angle={60}
-                    overlayOffset={20}
-                    baseGradient={["#5ea2d6", "#3f7fb0"]}
-                    overlayGradient={["#e4f4fb", "#e4f4fb"]}
+                    overlayOffset={25}
+                    baseGradient={["#437a11", "#437a11"]}
+                    overlayGradient={["#f0fdf4", "#f0fdf4"]}
                 // overlayGradient={["#ffffff", "rgba(255,255,255,0.18)"]}
                 />
             </div>

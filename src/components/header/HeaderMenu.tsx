@@ -10,8 +10,8 @@ export default function HeaderMenu() {
   ];
 
   return (
-    <header className="w-full bg-white/80 backdrop-blur-md  z-50">
-      <nav className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <header className="w-full backdrop-blur-md  z-50 pl-10">
+      <nav className="max-w-7xl mx-auto pr-6 py-3 flex items-center justify-between">
         {/* Лого хэсэг */}
         {/* <div className="text-2xl font-bold text-sky-700 tracking-wide">
           Agro<span className="text-sky-500">City</span>
@@ -23,7 +23,7 @@ export default function HeaderMenu() {
             <a
               key={index}
               href="#"
-              className="relative text-gray-700 font-medium hover:text-green-700 transition-colors duration-200"
+              className="relative text-green-950 text-xl hover:text-green-700 transition-colors duration-200" style={{ fontFamily: 'RobotoBold' }}
             >
               {item}
               <span className="absolute left-0 bottom-[-3px] h-[2px] w-0 bg-sky-600 transition-all duration-300 group-hover:w-full hover:w-full" />

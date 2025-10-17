@@ -36,7 +36,8 @@ const TwoDVideo = () => {
                             </Link> */}
 
                             <Link
-                                href="/MapClient"
+                                // href="/MapClient"
+                                href="/MapArcGISLayers"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 border border-[#306c12] px-10 py-3 rounded-xl text-slate-800 bg-white/70 hover:bg-white transition"
