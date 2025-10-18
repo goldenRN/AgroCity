@@ -116,7 +116,7 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar
-      className="top-(--header-height) h-[calc(100svh-var(--header-height))]!"
+      className="top-(--header-height) h-(--header-height))!"
       {...props}
     >
       <SidebarHeader>
@@ -125,9 +125,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenuButton size="lg" tooltip="Home">
               <div className="flex flex-col items-center justify-center gap-1">
                 <a href="/admin" className="flex flex-col items-center gap-1">
-                  <div className="bg-[#306c12] text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+                  {/* <div className="bg-[#306c12] text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
                     <Image src="/agro_log.png" width={50} height={50} alt="logo" />
-                  </div>
+                  </div> */}
                   <div className="grid flex-1 text-left text-sm leading-tight">
                     <span className="truncate font-medium">Agro City</span>
                     <span className="truncate text-xs">Эдийн засгийн тусгай бүс</span>

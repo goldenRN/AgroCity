@@ -14,8 +14,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       </div>
       <div className="flex flex-1 ">
         <AppSidebar />
-        <SidebarInset>
-          {/* Main content */}
+        <SidebarInset >
+          Main content
           <main className="flex-1 overflow-y-auto bg-gray-50 p-2">
             {children}
           </main>
