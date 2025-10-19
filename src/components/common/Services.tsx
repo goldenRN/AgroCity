@@ -8,33 +8,33 @@ export default function Services() {
       title: "3D Дижитал ихэр",
       desc: "Газрын төлөвлөлт, усалгааны менежмент, хөрсний өгөгдөлд суурилсан ухаалаг загварчлал.",
       icon: "/icons/digital-twin.png",
-      image: "/images/service-3d.jpg",
+      image: "/service1.jpg",
     },
     {
       title: "AI өгөгдөлд суурилсан дүн шинжилгээ",
       desc: "Аналитик загвар ашиглан ургацын төлөв, эрсдэлийн оношлогоо, усны хэрэглээний таамаглал гаргана.",
       icon: "/icons/ai-analytics.png",
-      image: "/images/service-ai.jpg",
+      image: "/service2.jpg",
     },
     {
       title: "IoT мэдрэгчийн сүлжээ",
       desc: "Хөрсний чийг, температур, агаарын чанарыг бодит цагийн горимоор хэмжин, серверт илгээнэ.",
       icon: "/icons/iot.png",
-      image: "/images/service-iot.jpg",
+      image: "/service3.jpg",
     },
     {
       title: "Газар тариалангийн хяналт",
       desc: "Дрон, хиймэл дагуулын зураглал ашиглан тариалангийн явцыг хянах, алсаас удирдах систем.",
       icon: "/icons/drone.png",
-      image: "/images/service-drone.jpg",
+      image: "/service4.jpg",
     },
   ]
 
   return (
-    <main className="max-w-8xl mx-auto px-10 py-10 bg-gray-100">
+    <main className="max-w-8xl mx-auto px-10 py-20 ">
       {/* Header */}
       <section className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl  text-gray-900 mb-4" style={{ fontFamily: 'RobotoBold' }}>
+        <h1 className="text-4xl md:text-4xl  text-gray-900 mb-4 uppercase" style={{ fontFamily: 'RobotoBold' }}>
           Агро Сити төслийн үйлчилгээ
         </h1>
         <p className="text-lg md:text-xl text-gray-700 mx-auto" style={{ fontFamily: 'RobotoRegular' }}>
@@ -50,7 +50,7 @@ export default function Services() {
             key={i}
             className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition transform hover:-translate-y-1 flex flex-col"
           >
-            <div className="relative w-full h-48">
+            <div className="relative w-full h-60">
               <Image
                 src={srv.image}
                 alt={srv.title}
@@ -61,14 +61,14 @@ export default function Services() {
 
             <div className="p-5 flex flex-col flex-1">
               <div className="flex items-center gap-3 mb-3">
-                <Image src={srv.icon} alt={srv.title} width={32} height={32} />
+                {/* <Image src={srv.icon} alt={srv.title} width={32} height={32} /> */}
                 <h3 className="text-lg font-roboto-bold text-gray-800">{srv.title}</h3>
               </div>
               <p className="text-sm text-gray-600 font-roboto-regular flex-1">
                 {srv.desc}
               </p>
               <div className="mt-4">
-                <button className="text-blue-600 hover:text-blue-800 text-sm font-medium transition">
+                <button className="text-lime-700 hover:text-blue-800 text-sm font-medium transition">
                   Дэлгэрэнгүй →
                 </button>
               </div>

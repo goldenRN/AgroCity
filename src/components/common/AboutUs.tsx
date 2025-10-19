@@ -2,10 +2,10 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
-
+import { Sprout, EyeIcon, StarIcon } from 'lucide-react'
 export default function AboutUs() {
   return (
-    <main className="max-w-7xl mx-auto py-10 px-10">
+    <main className="ml-40 mr-40 mx-auto pt-20 px-10">
       {/* Header */}
       <section className="mb-12 items-center text-center">
         {/* <div className="w-full h-64 md:h-80 relative rounded-lg overflow-hidden shadow-sm">
@@ -21,7 +21,7 @@ export default function AboutUs() {
         <h1 className=" md:text-4xl text-green-950 uppercase" style={{ fontFamily: 'RobotoBold' }}>
           Бидний тухай
         </h1>
-        <p className="text-lg mt-10 md:text-xl text-gray-700 font-roboto-regular " style={{ fontFamily: 'RobotoBold' }}>
+        <p className="text-lg mt-10 md:text-xl text-gray-700 mx-50 " style={{ fontFamily: 'RobotoBold' }}>
           Сонгинохайрхан дүүргийн засаг даргын тамгын газрын <strong>AgroCity</strong> платформ нь
           оршин суугчдын санал гомдлыг хурдан шийдвэрлэх, хотын дэд бүтцийг илүү ил тод, үр ашигтай удирдах зорилготой.
           Бид иргэдэд илүү ойртсон үйлчилгээ, мэдээллийн нээлттэй байдлыг хангахыг эрхэмлэж ажиллана.
@@ -30,28 +30,44 @@ export default function AboutUs() {
       </section>
 
       {/* Mission / Vision */}
-      <section className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="p-6 bg-green-50 border rounded-lg shadow-sm">
-          <h3 className="text-lg font-roboto-bold text-gray-800 mb-2" style={{ fontFamily: 'RobotoBold' }}>Зорилго</h3>
-          <p className="text-base text-gray-600 font-roboto-regular" style={{ fontFamily: 'RobotoRegular' }}>
+      <section className="mb-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* Зорилго */}
+        <div className="group p-8 bg-lime-600 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
+          <Sprout size={50} className="mx-auto text-white mb-4 transition-transform duration-300 group-hover:scale-110" />
+          <h3 className="text-xl font-roboto-bold text-white mb-7 uppercase tracking-wide">
+            Зорилго
+          </h3>
+          <p className="text-white font-roboto-regular leading-relaxed">
             “АГРО-СИТИ” эдийн засгийн тусгай бүс нь Улаанбаатар хотын хүнсний ногооны хэрэглээг дотооддоо хангах, импортыг орлох бүтээгдэхүүнийг бий болгох үндсэн зорилготой.
           </p>
         </div>
-        <div className="p-6 bg-green-50 border rounded-lg shadow-sm ">
-          <h3 className="text-lg font-roboto-bold text-gray-800 mb-2" style={{ fontFamily: 'RobotoBold' }}>Алсын хараа</h3>
-          <p className="text-base text-gray-600 font-roboto-regular" style={{ fontFamily: 'RobotoRegular' }}>
+
+        {/* Алсын хараа */}
+        <div className="group p-8 bg-lime-700 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
+          <EyeIcon size={50} className="mx-auto text-white mb-4 transition-transform duration-300 group-hover:scale-110" />
+          <h3 className="text-xl font-roboto-bold text-white mb-7 uppercase tracking-wide">
+            Алсын хараа
+          </h3>
+          <p className="text-white font-roboto-regular leading-relaxed">
             Дүүрэг тэргүүлэгч, дижитал шийдэлд суурилсан иргэдэд ээлтэй засаг захиргаа болох.
           </p>
         </div>
-        <div className="p-6 bg-green-50 border rounded-lg shadow-sm">
-          <h3 className="text-lg font-roboto-bold text-gray-800 mb-2" style={{ fontFamily: 'RobotoBold' }}>Үнэт зүйлс</h3>
-          <ul className="text-base text-gray-600 font-roboto-regular list-disc list-inside space-y-1" style={{ fontFamily: 'RobotoRegular' }}>
-            <li >Ил тод байдал</li>
-            <li>Үр ашигтай шийдвэр</li>
-            <li>Харилцан хүндлэл</li>
+
+        {/* Үнэт зүйлс */}
+        <div className="group p-8 bg-lime-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
+          <StarIcon size={50} className="mx-auto text-white mb-4 transition-transform duration-300 group-hover:scale-110" />
+          <h3 className="text-xl font-roboto-bold text-white mb-7 uppercase tracking-wide">
+            Үнэт зүйлс
+          </h3>
+          <ul className="text-white font-roboto-regular space-y-2">
+            <li className="hover:text-lime-200 transition-colors duration-200">Ил тод байдал</li>
+            <li className="hover:text-lime-200 transition-colors duration-200">Үр ашигтай шийдвэр</li>
+            <li className="hover:text-lime-200 transition-colors duration-200">Харилцан хүндлэл</li>
           </ul>
         </div>
       </section>
+
+
 
       {/* Stats */}
       <section className="mb-12 bg-gradient-to-r from-white via-lime-700 to-white p-6 rounded-lg">

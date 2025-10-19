@@ -10,7 +10,7 @@ import HeaderMenu from "./HeaderMenu";
 
 const Navbar = () => {
   return (
-    <header className="w-full shadow-lg border-b border-gray-200 sticky top-0 z-50  pl-10 pr-10 bg-white">
+    <header className="w-full shadow-lg border-b border-gray-200 sticky top-0 z-50  pl-50 pr-50 bg-white">
 
       {/* --- Main navigation --- */}
       <nav >

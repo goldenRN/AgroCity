@@ -33,7 +33,7 @@ export default function FeedbackSection() {
 
         <form onSubmit={handleSubmit} className="space-y-6 text-left">
           <div>
-            <label className="block text-lime-700 mb-2 font-semibold">Нэр</label>
+            <label className="block text-green-950 mb-2 font-semibold">Нэр</label>
             <input
               type="text"
               name="name"
@@ -45,7 +45,7 @@ export default function FeedbackSection() {
           </div>
 
           <div>
-            <label className="block text-lime-700 mb-2 font-semibold">Имэйл</label>
+            <label className="block text-green-950 mb-2 font-semibold">Имэйл</label>
             <input
               type="email"
               name="email"
@@ -57,7 +57,7 @@ export default function FeedbackSection() {
           </div>
 
           <div>
-            <label className="block text-lime-700 mb-2 font-semibold">Санал</label>
+            <label className="block text-green-950 mb-2 font-semibold">Санал</label>
             <textarea
               name="message"
               rows={5}
@@ -71,7 +71,7 @@ export default function FeedbackSection() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="flex items-center gap-2 bg-lime-700 text-white px-6 py-3 rounded-lg hover:bg-lime-800 transition-colors"
+              className="flex items-center gap-2 bg-lime-700 text-white px-6 py-3 rounded-lg hover:bg-lime-800 transition-colors px-10"
               style={{ fontFamily: "RobotoBold" }}
             >
               <Send size={18} />

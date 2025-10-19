@@ -10,12 +10,10 @@ import FeedbackSection from '@/components/common/Feedback';
 
 export default function Home() {
   return (
-    <main className="min-h-screen ">
+    <main className="min-h-screen bg-slate-50">
       <ThreeDVideo />
-
       <AboutUs />
-      {/* <Services /> */}
-      <div className="flex items-center justify-center w-full py-5">
+      <div className="flex items-center justify-center w-full pt-5 pb-5">
         <img
           src="https://www.vu.city/hubfs/Group%20503.svg"
           alt="Group 503"
@@ -25,9 +23,8 @@ export default function Home() {
           className="max-w-full h-auto"
         />
       </div>
-
       <TwoDVideo />
-
+      <Services />
 
       <FeedbackSection />
       <section className=" bg-green-50 rounded-2xl p-10 text-center">
