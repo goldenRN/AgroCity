@@ -1,50 +1,47 @@
 'use clint'
-import React from 'react'
+import React, { Suspense } from 'react'
 import Link from 'next/link'
+import LoadFBXModel from '../MapClient3D/LoadFBXModel';
+import { Loader2 } from 'lucide-react';
 const TwoDVideo = () => {
 
     return (
 
-        <div className='relative h-200 pt-20' >
-            <div className='flex flex-column md:grid-cols-5 h-130 bg-[#f2f2f2]'>
-                <div className=" flex flex-column bg-color-[#e4f4fb] w-3/5 h-130 items-center justify-center" >
-                    <img className=" h-full items-center" src="/map.png" />
-                    <img className=" h-full items-center" src="/area.png" />
+        <div className='relative h-700px' >
+            <h1 className=" md:text-5xl text-green-950 md:text-center mb-5" style={{ fontFamily: 'RobotoBold' }}>
+                AgroCity 3D загвар
+            </h1>
+            <p className="mb-5 text-lg md:text-xl md:text-center text-green-950 pl-10 pr-10" style={{ fontFamily: 'RobotoRegular' }}>
+                AgroCity-ийн 3D дижитал ихэр нь ухаалаг хөдөө аж ахуйн орон зайн шийдвэр гаргах шинэ түвшнийг нээж өгнө. Бодит мэдээлэлд тулгуурлан төлөвлө, дүн шинжил, эрсдэлээ бууруул.
+            </p>
+           
+            <div className='flex flex-column md:grid-cols-5 h-700px bg-[#f2f2f2]'>
+                <div className=" flex flex-column bg-color-[#e4f4fb] h-700px w-4/5 items-center justify-center ml-10 mr-5" >
+                    {/* <img className=" h-full items-center" src="/map.png" />
+                    <img className=" h-full items-center" src="/area.png" /> */}
+                    {/* <LoadFBXModel /> */}
+                    {/* <Suspense
+                        fallback={
+                            <div className="flex flex-col items-center justify-center">
+                                <Loader2 className="animate-spin text-blue-600 w-10 h-10 mb-2" />
+                                <p className="text-blue-700 font-medium">3D загвар ачаалж байна...</p>
+                            </div>
+                        }
+                    > */}
+                    {/* 🎥 FBX Model viewer */}
+                    <LoadFBXModel />
+                    {/* </Suspense> */}
                 </div>
-                <div className=" w-2/5 mx-auto pt-24 pb-5 p-5 relative bg-[#f2f2f2]">
-                    <div className="flex flex-col items-center text-center">
-                        <h1 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
-                            2D газрын зураг
-                        </h1>
-                        {/* <p className="text-2xl md:text-2xl font-normal text-slate-500 leading-tight">
-                            3D дижитал ихэр хот
-                        </p> */}
-                        <p className="mt-4 max-w-2xl md:text-xl text-slate-700">
-                            AgroCity-ийн 2D газрын зураг нь орон зайн бодит өгөгдөл, өмчлөлийн бүртгэл, дэд бүтцийн мэдээлэл, байгаль орчны бүх өгөгдлийг нэгтгэсэн интерактив гео систем юм.
-                            Энэхүү зураглалаар хэрэглэгч:
-                            Газрын эзэмшил, ашиглалт, дэд бүтцийн нөхцөл байдлыг хялбар харьцуулах,
-                            Төслийн төлөвлөлт, хөрөнгө оруулалтын шийдвэр гаргахад ашиглах,
-                            дүн шинжилгээ хийх боломжтой.
-                        </p>
+                <div className=" w-1/5 mx-auto pt-24 ml-10 pr-20 relative bg-[#f2f2f2]">
+                    <div className="flex flex-col items-left text-left text-lg pb-10" style={{ fontFamily: 'RobotoBold' }}>
 
-                        <div className="mt-6 flex gap-3 items-center flex-center">
-                            {/* <Link
-                                href="#contact"
-                                className="inline-flex items-center gap-2 bg-[#306c12] text-white px-5 py-3 rounded-xl font-medium shadow-md hover:shadow-lg transition transform hover:-translate-y-1"
-                            >
-                                U
-                            </Link> */}
+                        {/* <ul className="text-base text-lg text-gray-600 font-roboto-regular list-disc list-inside space-y-1" style={{ fontFamily: 'RobotoRegular' }}> */}
+                        <a className='pb-5'>Газар зүйн давхрага</a>
+                        <a className='pb-5'>Дэд бүтэц</a>
+                        <a className='pb-5'> Хөдөө аж ахуй</a>
+                        {/* </ul> */}
 
-                            <Link
-                                // href="/MapClient"
-                                href="/MapArcGISLayers"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 border border-[#306c12] px-10 py-3 rounded-xl text-slate-800 bg-white/70 hover:bg-white transition"
-                            >
-                                2D үзэх
-                            </Link>
-                        </div>
+
                     </div>
                 </div>
             </div>

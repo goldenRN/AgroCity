@@ -18,8 +18,8 @@ export default function AboutUs() {
           />
         </div> */}
 
-        <h1 className=" md:text-4xl text-black uppercase " style={{ fontFamily: 'RobotoBold' }}>
-          БИДНИЙ ТУХАЙ
+        <h1 className=" md:text-4xl text-green-950 uppercase" style={{ fontFamily: 'RobotoBold' }}>
+          Бидний тухай
         </h1>
         <p className="text-lg mt-10 md:text-xl text-gray-700 font-roboto-regular " style={{ fontFamily: 'RobotoBold' }}>
           Сонгинохайрхан дүүргийн засаг даргын тамгын газрын <strong>AgroCity</strong> платформ нь

@@ -74,23 +74,20 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-b from-[#e6edf5] to-[#c5d3ea]">
-      <Card className="flex flex-col md:flex-row bg-white shadow-2xl rounded-2xl overflow-hidden md:w-3/4 lg:w-2/4">
+    <div className="flex justify-center items-center min-h-screen bg-green-50">
+      <Card className="flex md:flex-row bg-white shadow-2xl rounded-2xl overflow-hidden md:w-3/4 lg:w-2/4">
         {/* LEFT PANEL */}
         <CardHeader className="bg-[#054b13] text-white flex flex-col items-center justify-center w-full md:w-1/3">
           <div className="flex flex-col items-center">
             <Image src="/agro_logo.jpg" width={250} height={250} alt="logo" />
           </div>
-          {/* <CardDescription className="text-gray-200 mt-2 text-sm text-center">
-            Системд нэвтрэх эрхээрээ орно уу
-          </CardDescription> */}
-        </CardHeader>
 
+        </CardHeader>
         {/* RIGHT PANEL */}
         <CardContent className="w-full md:w-2/3 p-10 bg-white">
-          <CardTitle className="text-2xl font-bold text-center text-[#054b13]">
+          <CardTitle className="text-2xl font-bold text-center text-[#054b13]" style={{ fontFamily: 'RobotoBold' }}>
             {/* <CardTitle className="text-center text-lg mt-5 font-semibold"> */}
-            Удирдлагын систем
+            Удирдлагын системд нэвтрэх
             {/* </CardTitle> */}
           </CardTitle>
 
@@ -104,7 +101,7 @@ const LoginForm = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-[#054b13] font-medium">
+                    <FormLabel className="text-green-950 text-lg" style={{ fontFamily: 'RobotoBold' }}>
                       Нэвтрэх нэр
                     </FormLabel>
                     <FormControl>
@@ -112,6 +109,7 @@ const LoginForm = () => {
                         placeholder="Нэвтрэх нэр"
                         {...field}
                         className="border-[#9bb0d6] focus-visible:ring-[#1d3b86]"
+                        style={{ fontFamily: 'RobotoBold' }}
                       />
                     </FormControl>
                     <FormMessage className="text-red-600" />
@@ -124,7 +122,7 @@ const LoginForm = () => {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-[#054b13] font-medium">
+                    <FormLabel className="text-green-950 text-lg" style={{ fontFamily: 'RobotoBold' }}>
                       Нууц үг
                     </FormLabel>
                     <FormControl>
@@ -133,6 +131,7 @@ const LoginForm = () => {
                         placeholder="Нууц үг"
                         {...field}
                         className="border-[#9bb0d6] focus-visible:ring-[#1d3b86]"
+                        style={{ fontFamily: 'RobotoBold' }}
                       />
                     </FormControl>
                     <FormMessage className="text-red-600" />
@@ -143,10 +142,10 @@ const LoginForm = () => {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-[#d49943] to-[#edad45] hover:opacity-90 transition-all duration-200 text-white font-semibold py-2"
-              >
+                className="w-full bg-gradient-to-r from-[#d49943] to-[#edad45] hover:opacity-90 transition-all duration-200 text-white py-2 text-lg"
+                style={{ fontFamily: 'RobotoBold' }}>
                 {loading ? (
-                  <div className="flex items-center justify-center gap-2">
+                  <div className="flex items-center justify-center gap-2" style={{ fontFamily: 'RobotoBold' }}>
                     <Loader2 className="animate-spin h-4 w-4" />
                     Нэвтэрч байна...
                   </div>
@@ -156,6 +155,16 @@ const LoginForm = () => {
               </Button>
             </form>
           </Form>
+          <div className='md:flex-row text-center pt-5'>
+            <CardDescription className="text-green-950 mt-2 text-sm text-center" style={{ fontFamily: 'RobotoBold' }}>
+              Системд нэвтрэх эрх үүсгэх бол
+            </CardDescription>
+            <a href='/register'>
+              {/* <Link href={item.url}> */}
+              {/* <item.icon /> */}
+              <span style={{ fontFamily: 'RobotoBold' }}>Бүртгүүлэх</span>
+            </a>
+          </div>
         </CardContent>
       </Card>
     </div >

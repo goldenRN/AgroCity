@@ -25,9 +25,14 @@ const ThreeDVideo = () => {
                         <p className="text-2xl md:text-2xl  text-green-950  pt-5" style={{ fontFamily: 'RobotoBold' }}>
                             3D дижитал ихэр хот
                         </p>
-                        <p className="mt-5 max-w-2xl text-lg md:text-xl text-black-700 " style={{ fontFamily: 'RobotoRegular' }}>
-                            AgroCity-ийн 3D дижитал ихэр нь ухаалаг хөдөө аж ахуйн орон зайн шийдвэр гаргах шинэ түвшнийг нээж өгнө. Бодит мэдээлэлд тулгуурлан төлөвлө, дүн шинжил, эрсдэлээ бууруул.
+                        <p className="mt-4 max-w-2xl md:text-xl text-slate-700">
+                            AgroCity-ийн 3D/2D газрын зураг нь орон зайн бодит өгөгдөл, өмчлөлийн бүртгэл, дэд бүтцийн мэдээлэл, байгаль орчны бүх өгөгдлийг нэгтгэсэн интерактив гео систем юм.
+                            Энэхүү зураглалаар хэрэглэгч:
+                            Газрын эзэмшил, ашиглалт, дэд бүтцийн нөхцөл байдлыг хялбар харьцуулах,
+                            Төслийн төлөвлөлт, хөрөнгө оруулалтын шийдвэр гаргахад ашиглах,
+                            дүн шинжилгээ хийх боломжтой.
                         </p>
+                        
                         <div className='flex flex-row '>
                             <div className="mt-5 flex gap-3 items-center flex-center">
                                 <Link
@@ -41,11 +46,18 @@ const ThreeDVideo = () => {
                                 </Link>
                             </div>
                             <div className="mt-5 flex gap-3 items-center flex-center pl-5">
-                                <Link
+                                {/* <Link
                                     href="/MapClient3D"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     style={{ fontFamily: 'RobotoBold' }}
+                                    className="inline-flex items-center gap-2 border border-lime-700 px-10 py-3 rounded-md text-green-950 bg-green-50 hover:bg-green-100 transition"
+                                > */}
+                                <Link
+                                    // href="/MapClient"
+                                    href="/MapArcGISLayers"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 border border-lime-700 px-10 py-3 rounded-md text-green-950 bg-green-50 hover:bg-green-100 transition"
                                 >
                                     2D үзэх
@@ -98,20 +110,22 @@ const ThreeDVideo = () => {
             </div>
 
             {/* --- FBX modal --- */}
-            {showModel && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
-                    <div className="bg-white rounded-2xl shadow-2xl p-4 relative">
-                        <button
-                            onClick={() => setShowModel(false)}
-                            className="absolute top-3 right-3 text-slate-600 hover:text-black"
-                        >
-                            ✕
-                        </button>
-                        <LoadFBXModel />
+            {
+                showModel && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
+                        <div className="bg-white rounded-2xl shadow-2xl p-4 relative">
+                            <button
+                                onClick={() => setShowModel(false)}
+                                className="absolute top-3 right-3 text-slate-600 hover:text-black"
+                            >
+                                ✕
+                            </button>
+                            <LoadFBXModel />
+                        </div>
                     </div>
-                </div>
-            )}
-        </div>
+                )
+            }
+        </div >
 
     )
 }

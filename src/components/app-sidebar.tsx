@@ -35,7 +35,7 @@ const data = {
   navMain: [
     {
       title: "Газрын зураг",
-      url: "admin/map",
+      url: "/admin/map",
       icon: MapIcon,
       isActive: true,
       items: [
@@ -52,7 +52,7 @@ const data = {
     },
     {
       title: "Бүртгэл",
-      url: "/register",
+      url: "/admin/register",
       icon: SquareTerminal,
       items: [
         {
@@ -61,7 +61,7 @@ const data = {
         },
         {
           title: "Меню ",
-          url: "admin/register/category",
+          url: "/admin/register/category",
         },
         {
           title: "Тоон үзүүлэлтийн нэршил",
