@@ -2,7 +2,7 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Sprout, EyeIcon, StarIcon } from 'lucide-react'
+import { Sprout, EyeIcon, Gem } from 'lucide-react'
 export default function AboutUs() {
   return (
     <main className="ml-40 mr-40 mx-auto pt-20 px-10">
@@ -25,11 +25,16 @@ export default function AboutUs() {
           Сонгинохайрхан дүүргийн засаг даргын тамгын газрын <strong>AgroCity</strong> платформ нь
           оршин суугчдын санал гомдлыг хурдан шийдвэрлэх, хотын дэд бүтцийг илүү ил тод, үр ашигтай удирдах зорилготой.
           Бид иргэдэд илүү ойртсон үйлчилгээ, мэдээллийн нээлттэй байдлыг хангахыг эрхэмлэж ажиллана.
+
+          {/* <p className="text-lg mt-10 md:text-xl text-gray-700 font-roboto-regular " style={{ fontFamily: 'RobotoBold' }}>
+          Сонгинохайрхан дүүргийн засаг даргын тамгын газрын <strong>Агро-Сити</strong> платформ нь
+          оршин суугчдын <br /> санал гомдлыг хурдан шийдвэрлэх, хотын дэд бүтцийг илүү ил тод, <br /> үр ашигтай удирдах зорилготой.
+          Бид иргэдэд илүү ойртсон үйлчилгээ, <br />  мэдээллийн нээлттэй байдлыг хангахыг эрхэмлэж ажиллана.*/}
+
         </p>
 
       </section>
 
-      {/* Mission / Vision */}
       <section className="mb-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {/* Зорилго */}
         <div className="group p-8 bg-lime-600 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
@@ -55,7 +60,7 @@ export default function AboutUs() {
 
         {/* Үнэт зүйлс */}
         <div className="group p-8 bg-lime-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
-          <StarIcon size={50} className="mx-auto text-white mb-4 transition-transform duration-300 group-hover:scale-110" />
+          <Gem size={50} className="mx-auto text-white mb-4 transition-transform duration-300 group-hover:scale-110" />
           <h3 className="text-xl font-roboto-bold text-white mb-7 uppercase tracking-wide">
             Үнэт зүйлс
           </h3>
@@ -63,6 +68,7 @@ export default function AboutUs() {
             <li className="hover:text-lime-200 transition-colors duration-200">Ил тод байдал</li>
             <li className="hover:text-lime-200 transition-colors duration-200">Үр ашигтай шийдвэр</li>
             <li className="hover:text-lime-200 transition-colors duration-200">Харилцан хүндлэл</li>
+
           </ul>
         </div>
       </section>
@@ -70,19 +76,20 @@ export default function AboutUs() {
 
 
       {/* Stats */}
-      <section className="mb-12 bg-gradient-to-r from-white via-lime-700 to-white p-6 rounded-lg">
+      {/* <section className="mb-12 bg-gradient-to-r from-white via-gray-400 to-white p-6 rounded-lg"> */}
+        <section className="mb-12 bg-gradient-to-r from-slate-50 via-green-50 to-slate-50  p-6   border-b   border-t border-lime-200">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
           <div>
-            <div className="text-3xl font-roboto-bold text-white" style={{ fontFamily: 'RobotoBold' }}>1.200+</div>
-            <div className="text-sm text-white font-roboto-regular mt-1" style={{ fontFamily: 'RobotoBold' }}>Шилжүүлсэн санал</div>
+            <div className="text-3xl font-roboto-bold text-green-950" style={{ fontFamily: 'RobotoBold' }}>1.200+</div>
+            <div className="text-sm text-green-950 font-roboto-regular mt-1" style={{ fontFamily: 'RobotoBold' }}>Шилжүүлсэн санал</div>
           </div>
           <div>
-            <div className="text-3xl font-roboto-bold text-white" style={{ fontFamily: 'RobotoBold' }}>85%</div>
-            <div className="text-sm text-white font-roboto-regular mt-1" style={{ fontFamily: 'RobotoBold' }}>Дүн шинжилгээ төгссөн</div>
+            <div className="text-3xl font-roboto-bold text-green-950" style={{ fontFamily: 'RobotoBold' }}>85%</div>
+            <div className="text-sm text-green-950 font-roboto-regular mt-1" style={{ fontFamily: 'RobotoBold' }}>Дүн шинжилгээ төгссөн</div>
           </div>
           <div>
-            <div className="text-3xl font-roboto-bold text-white" style={{ fontFamily: 'RobotoBold' }}>5+ жил</div>
-            <div className="text-sm text-white font-roboto-regular mt-1" style={{ fontFamily: 'RobotoBold' }}>Туршлага</div>
+            <div className="text-3xl font-roboto-bold text-green-950" style={{ fontFamily: 'RobotoBold' }}>5+ жил</div>
+            <div className="text-sm text-green-950 font-roboto-regular mt-1" style={{ fontFamily: 'RobotoBold' }}>Туршлага</div>
           </div>
         </div>
       </section>
