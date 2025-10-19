@@ -37,40 +37,40 @@ const LoginForm = () => {
 
   const handleSubmit = async (data: z.infer<typeof formSchema>) => {
     setLoading(true);
-    // try {
-    //   const response = await fetch('http://localhost:4000/api/auth/login', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({
-    //       email: data.email,
-    //       password: data.password,
-    //     }),
-    //   });
+    try {
+      const response = await fetch('http://localhost:4000/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: data.email,
+          password: data.password,
+        }),
+      });
 
-    //   if (!response.ok) {
+      if (!response.ok) {
 
-    //     const error = await response.json();
-    //     alert(error.message || 'Нэвтрэхэд амжилтгүй боллоо.');
-    //     return;
-    //   }
+        const error = await response.json();
+        alert(error.message || 'Нэвтрэхэд амжилтгүй боллоо.');
+        return;
+      }
 
-    //   const result = await response.json();
-    //   const userData = {
-    //     token: result.token,
-    //     username: result.username || data.email,
-    //     role: 'admin',
-    //   };
-    //   await localStorage.setItem('user', JSON.stringify(userData));
-    //   await login(userData);
+      const result = await response.json();
+      const userData = {
+        token: result.token,
+        username: result.username || data.email,
+        role: 'admin',
+      };
+      await localStorage.setItem('user', JSON.stringify(userData));
+      await login(userData);
       router.push('/admin');
-    // } catch (error) {
-    //   console.error('Login error:', error);
-    //   alert('Системийн алдаа гарлаа.');
-    // } finally {
+    } catch (error) {
+      console.error('Login error:', error);
+      alert('Системийн алдаа гарлаа.');
+    } finally {
       setLoading(false);
-    // }
+    }
   };
 
   return (
