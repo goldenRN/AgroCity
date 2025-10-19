@@ -36,12 +36,12 @@ export function NavMain({
 }) {
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>Удирдах хэсэг</SidebarGroupLabel>
+      <SidebarGroupLabel className="text-m font-semibold text-blue-950 tracking-wide" >Удирдах хэсэг</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => (
           <Collapsible key={item.title} asChild defaultOpen={item.isActive}>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild tooltip={item.title}>
+              <SidebarMenuButton asChild className="group flex items-center gap-2 px-3 py-1.5 rounded-md transition-all duration-200 hover:bg-blue-100" tooltip={item.title}>
                 {/* <a href={item.url}> */}
                 {/* <Link href={item.url}> */}
                 {/* <item.icon /> */}
@@ -60,7 +60,7 @@ export function NavMain({
                     <SidebarMenuSub>
                       {item.items?.map((subItem) => (
                         <SidebarMenuSubItem key={subItem.title}>
-                          <SidebarMenuSubButton asChild>
+                          <SidebarMenuSubButton asChild className="group flex items-center gap-2 px-3 py-1.5 rounded-md transition-all duration-200 hover:bg-blue-100">
                             <a href={subItem.url}>
                               <span>{subItem.title}</span>
                             </a>

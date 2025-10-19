@@ -15,7 +15,7 @@ const stats = [
 const ThreeDVideo = () => {
     const [showModel, setShowModel] = useState(false);
     return (
-        <div className='relative bg-white h-250 ' >
+        <div className='relative bg-white h-230 ' >
             <div className='flex flex-column md:grid-cols-5 h-150 p-10 bg-green-50'>
                 <div className=" w-2/5 mx-auto pt-24 pb-5 relative bg-green-50">
                     <div className="flex flex-col items-left text-left pr-5">
@@ -86,15 +86,17 @@ const ThreeDVideo = () => {
 
             <div className="absolute left-0 right-0 bottom-0 z-10 pointer-events-none">
                 <DiagonalBottomRibbon60deg
-                    height={250}
-                    diagonalHeight={150}
-                    angle={60}
+                    height={200}
+                    diagonalHeight={100}
+                    angle={80}
                     overlayOffset={25}
+                    orientation='bottom-left'
                     baseGradient={["#437a11", "#437a11"]}
                     overlayGradient={["#f0fdf4", "#f0fdf4"]}
-                // overlayGradient={["#ffffff", "rgba(255,255,255,0.18)"]}
+                // overlayGradient={["#0b0b0bff", "rgba(255,255,255,0.18)"]}
                 />
             </div>
+
             {/* --- FBX modal --- */}
             {showModel && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">

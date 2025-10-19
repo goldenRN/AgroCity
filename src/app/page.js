@@ -17,7 +17,7 @@ export default function Home() {
       <AboutUs />
       <Services />
       <FeedbackSection />
-      <section className="mt-20 bg-green-50 rounded-2xl p-10 text-center">
+      <section className=" bg-green-50 rounded-2xl p-10 text-center">
         <h2 className="text-3xl font-roboto-bold text-gray-900 mb-4" style={{ fontFamily: 'RobotoBold' }}>
           Хөдөө аж ахуйг дижитал эринд хүргэе!
         </h2>

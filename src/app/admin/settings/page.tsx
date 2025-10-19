@@ -9,7 +9,7 @@ const SettingsPage = () => {
         <>
             <div className="w-[calc(100vw-300px)]">
                 {/* Top bar: always visible */}
-                <div className="flex justify-between items-center px-4 py-2 bg-white  sticky top-0 z-10">
+                <div className="flex justify-between items-center px-4 py-2 bg-gray  sticky top-0 z-10">
                     <BackButton text="Буцах" link="/admin" />
                 </div>
 

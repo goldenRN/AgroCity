@@ -19,10 +19,10 @@ export default function FeedbackSection() {
   };
 
   return (
-    <section className="bg-green-50 py-16 px-6 md:px-20">
+    <section className="bg-gradient-to-b from-white to-green-50 py-16 px-6 md:px-20">
       <div className="max-w-3xl mx-auto text-center">
         <h2
-          className="text-3xl md:text-4xl font-bold text-lime-700 mb-4"
+          className="text-3xl md:text-4xl font-bold text-lime-950 mb-4"
           style={{ fontFamily: "RobotoBold" }}
         >
           Санал хүсэлт илгээх
@@ -39,7 +39,7 @@ export default function FeedbackSection() {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-3 border border-lime-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-700"
+              className="w-full p-3 border border-lime-950 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-700"
               placeholder="Таны нэр"
             />
           </div>
@@ -51,7 +51,7 @@ export default function FeedbackSection() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-3 border border-lime-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-700"
+              className="w-full p-3 border border-lime-950 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-700"
               placeholder="name@email.com"
             />
           </div>
@@ -63,7 +63,7 @@ export default function FeedbackSection() {
               rows={5}
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-3 border border-lime-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-700"
+              className="w-full p-3 border border-lime-950 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-700"
               placeholder="Санал хүсэлтээ энд бичнэ үү..."
             />
           </div>
