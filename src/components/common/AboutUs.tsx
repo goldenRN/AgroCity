@@ -2,6 +2,7 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { Flag, Gem, Target } from "lucide-react"
 
 export default function AboutUs() {
   return (
@@ -22,9 +23,9 @@ export default function AboutUs() {
           Бидний тухай
         </h1>
         <p className="text-lg mt-10 md:text-xl text-gray-700 font-roboto-regular " style={{ fontFamily: 'RobotoBold' }}>
-          Сонгинохайрхан дүүргийн засаг даргын тамгын газрын <strong>AgroCity</strong> платформ нь
-          оршин суугчдын санал гомдлыг хурдан шийдвэрлэх, хотын дэд бүтцийг илүү ил тод, үр ашигтай удирдах зорилготой.
-          Бид иргэдэд илүү ойртсон үйлчилгээ, мэдээллийн нээлттэй байдлыг хангахыг эрхэмлэж ажиллана.
+          Сонгинохайрхан дүүргийн засаг даргын тамгын газрын <strong>Агро-Сити</strong> платформ нь
+          оршин суугчдын <br /> санал гомдлыг хурдан шийдвэрлэх, хотын дэд бүтцийг илүү ил тод, <br /> үр ашигтай удирдах зорилготой.
+          Бид иргэдэд илүү ойртсон үйлчилгээ, <br />  мэдээллийн нээлттэй байдлыг хангахыг эрхэмлэж ажиллана.
         </p>
 
       </section>
@@ -32,20 +33,30 @@ export default function AboutUs() {
       {/* Mission / Vision */}
       <section className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="p-6 bg-green-50 border rounded-lg shadow-sm">
-          <h3 className="text-lg font-roboto-bold text-gray-800 mb-2" style={{ fontFamily: 'RobotoBold' }}>Зорилго</h3>
-          <p className="text-base text-gray-600 font-roboto-regular" style={{ fontFamily: 'RobotoRegular' }}>
+          <div className="flex justify-center mb-3">
+            <Flag className="w-10 h-10 text-green-900" />
+          </div>
+          <h3 className="text-lg font-roboto-bold text-gray-800 mb-2 text-center" style={{ fontFamily: 'RobotoBold' }}>Зорилго</h3>
+          <p className="text-base text-gray-600 font-roboto-regular text-center" style={{ fontFamily: 'RobotoRegular' }}>
             “АГРО-СИТИ” эдийн засгийн тусгай бүс нь Улаанбаатар хотын хүнсний ногооны хэрэглээг дотооддоо хангах, импортыг орлох бүтээгдэхүүнийг бий болгох үндсэн зорилготой.
           </p>
         </div>
         <div className="p-6 bg-green-50 border rounded-lg shadow-sm ">
-          <h3 className="text-lg font-roboto-bold text-gray-800 mb-2" style={{ fontFamily: 'RobotoBold' }}>Алсын хараа</h3>
-          <p className="text-base text-gray-600 font-roboto-regular" style={{ fontFamily: 'RobotoRegular' }}>
+          {/* Icon — center байрлалтай */}
+          <div className="flex justify-center mb-3">
+            <Target className="w-10 h-10 text-green-900" />
+          </div>
+          <h3 className="text-lg font-roboto-bold text-gray-800 mb-2 text-center" style={{ fontFamily: 'RobotoBold' }}>Алсын хараа</h3>
+          <p className="text-base text-gray-600 font-roboto-regular text-center" style={{ fontFamily: 'RobotoRegular' }}>
             Дүүрэг тэргүүлэгч, дижитал шийдэлд суурилсан иргэдэд ээлтэй засаг захиргаа болох.
           </p>
         </div>
         <div className="p-6 bg-green-50 border rounded-lg shadow-sm">
-          <h3 className="text-lg font-roboto-bold text-gray-800 mb-2" style={{ fontFamily: 'RobotoBold' }}>Үнэт зүйлс</h3>
-          <ul className="text-base text-gray-600 font-roboto-regular list-disc list-inside space-y-1" style={{ fontFamily: 'RobotoRegular' }}>
+          <div className="flex justify-center mb-3">
+            <Gem className="w-10 h-10 text-green-900" />
+          </div>
+          <h3 className="text-lg font-roboto-bold text-gray-800 mb-2 text-center" style={{ fontFamily: 'RobotoBold' }}>Үнэт зүйлс</h3>
+          <ul className="text-base pl-20 text-gray-600 font-roboto-regular list-disc list-inside space-y-1" style={{ fontFamily: 'RobotoRegular' }}>
             <li >Ил тод байдал</li>
             <li>Үр ашигтай шийдвэр</li>
             <li>Харилцан хүндлэл</li>
