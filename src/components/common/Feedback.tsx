@@ -23,17 +23,17 @@ export default function FeedbackSection() {
       <div className="max-w-3xl mx-auto text-center">
         <h2
           className="text-4xl md:text-4xl text-green-950 mb-4 uppercase"
-          style={{ fontFamily: "RobotoBold" }}
+
         >
           Санал хүсэлт илгээх
         </h2>
-        <p className="text-green-950 mb-10" style={{ fontFamily: "RobotoRegular" }}>
+        <p className="text-green-950 mb-10" >
           Таны санал AgroCity-ийн хөгжлийг илүү төгөлдөр болгоход чухал ач холбогдолтой.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6 text-left">
           <div>
-            <label className="block text-green-950 mb-2 font-semibold">Нэр</label>
+            <label className="block text-green-950 mb-2 ">Нэр</label>
             <input
               type="text"
               name="name"
@@ -45,7 +45,7 @@ export default function FeedbackSection() {
           </div>
 
           <div>
-            <label className="block text-green-950 mb-2 font-semibold">Имэйл</label>
+            <label className="block text-green-950 mb-2 ">Имэйл</label>
             <input
               type="email"
               name="email"
@@ -57,7 +57,7 @@ export default function FeedbackSection() {
           </div>
 
           <div>
-            <label className="block text-green-950 mb-2 font-semibold">Санал</label>
+            <label className="block text-green-950 mb-2 ">Санал</label>
             <textarea
               name="message"
               rows={5}
@@ -72,7 +72,7 @@ export default function FeedbackSection() {
             <button
               type="submit"
               className="flex items-center gap-2 bg-lime-700 text-white px-6 py-3 rounded-lg hover:bg-lime-800 transition-colors px-10"
-              style={{ fontFamily: "RobotoBold" }}
+
             >
               <Send size={18} />
               Илгээх

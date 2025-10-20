@@ -5,7 +5,7 @@ import Navbar from './header/Navbar'
 import Footer from './Footer'
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
-  const hideHeaderRoutes = ['/auth', '/admin', '/register', '/MapClient']
+  const hideHeaderRoutes = ['/auth', '/admin', '/register']
   const shouldHideHeader = hideHeaderRoutes.some(route => pathname.startsWith(route))
 
   return (

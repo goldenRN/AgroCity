@@ -35,14 +35,14 @@ const defaultFaqs = [
 
 export default function FAQSectionAgroCity({
   faqs = defaultFaqs,
-  imageSrc = "/map.png",
+  imageSrc = "/poster.jpg",
   imageAlt = "AgroCity төсөөлөл",
 }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // эхлээд 1-р нээлттэй байлгах бол 0 эсвэл null
   return (
     // <section className="max-w-6xl mx-auto px-4 py-12">
      <section className="bg-gradient-to-b from-white to-green-50 py-16 px-50 md:px-50">
-      <h2 className="text-2xl md:text-3xl font-semibold text-slate-800 mb-6 text-center upercase">
+      <h2 className="text-2xl md:text-3xl  text-slate-800 mb-6 text-center upercase">
         Түгээмэл асуулт хариулт
       </h2>
 
@@ -54,7 +54,7 @@ export default function FAQSectionAgroCity({
             return (
               <div
                 key={i}
-                className="bg-white rounded-md border border-transparent hover:border-slate-100 transition"
+                className="bg-slate-50 rounded-md border border-transparent hover:border-lime-700 transition"
               >
                 <button
                   type="button"
@@ -62,9 +62,9 @@ export default function FAQSectionAgroCity({
                   onClick={() => setOpenIndex(open ? null : i)}
                   className="w-full flex items-center justify-between px-4 py-4 text-left"
                 >
-                  <span className="text-slate-800 font-medium">{f.q}</span>
+                  <span className="text-green-950 font-medium">{f.q}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-slate-500 transform transition-transform duration-200 ${
+                    className={`w-5 h-5 text-green-950 transform transition-transform duration-200 ${
                       open ? "rotate-180" : ""
                     }`}
                   />
@@ -75,7 +75,7 @@ export default function FAQSectionAgroCity({
                     open ? "max-h-40 opacity-100 py-2" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <p className="text-slate-600 text-sm leading-relaxed">{f.a}</p>
+                  <p className="text-green-950 text-sm leading-relaxed">{f.a}</p>
                 </div>
 
                 {/* bottom divider */}
@@ -87,18 +87,18 @@ export default function FAQSectionAgroCity({
 
         {/* RIGHT: Illustration / image */}
         <div className="flex items-center justify-center">
-          <div className="w-full max-w-md bg-slate-50 rounded-lg overflow-hidden shadow-sm">
+          <div className="w-full max-w-lg bg-slate-50 rounded-lg overflow-hidden shadow-sm">
             <img
               src={imageSrc}
               alt={imageAlt}
-              className="h-100 object-fix"
+              className=" object-cover"
               loading="lazy"
             />
-            <div className="px-4 py-3">
+            {/* <div className="px-4 py-3">
               <p className="text-sm text-slate-600">
                 АгроСити төсөл — танилцуулгын зураг. (3D загвар, үйлчилгээ, газрын зураг ба холбогдох мэдээлэл энд байрлана.)
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -132,7 +132,7 @@ export default function GeojsonMap({ data, colorMap = {}, selectedName = null })
   }
 
   return (
-    <MapContainer center={center} zoom={12} scrollWheelZoom={true} className="w-full h-full">
+    <MapContainer center={center} zoom={12} scrollWheelZoom={true} className="relative z-0 w-full h-full">
       <TileLayer attribution='&copy; OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
        <FitBounds data={data} />
       <GeoJSON data={data} style={styleFeature} onEachFeature={onEachFeature} />

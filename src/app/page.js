@@ -10,9 +10,6 @@ import FAQSection from '@/components/common/FAQSection';
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 
-// const MapLeafletArcGIS = dynamic(() => import("./MapLeafletArcGIS"), {
-//   ssr: false, // ⛔ SSR унтраана
-// });
 
 export default function Home() {
   const [geojson, setGeojson] = useState(null);
@@ -51,10 +48,10 @@ export default function Home() {
       <MapWithSidebar geojson={geojson} />
       <FAQSection/>
       <section className=" bg-green-50 rounded-2xl p-10 text-center">
-        <h2 className="text-3xl font-roboto-bold text-gray-900 mb-4" style={{ fontFamily: 'RobotoBold' }}>
+        <h2 className="text-3xl  text-gray-900 mb-4">
           Хөдөө аж ахуйг дижитал эринд хүргэе!
         </h2>
-        <p className="text-gray-700 font-roboto-regular max-w-2xl mx-auto mb-6" style={{ fontFamily: 'RobotoRegular' }}>
+        <p className="text-gray-700  max-w-2xl mx-auto mb-6" >
           AgroCity системийн тусламжтайгаар та газрын төлөвлөлт, усалгааны менежмент,
           ургацын таамаглалыг бүрэн автомат хэлбэрээр удирдах боломжтой.
         </p>

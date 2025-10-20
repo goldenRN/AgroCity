@@ -18,18 +18,14 @@ export default function AboutUs() {
           />
         </div> */}
 
-        <h1 className=" md:text-4xl text-green-950 uppercase" style={{ fontFamily: 'RobotoBold' }}>
+        <h1 className=" md:text-4xl text-green-950 uppercase" >
           Бидний тухай
         </h1>
-        <p className="text-lg mt-10 md:text-xl text-gray-700 mx-50 " style={{ fontFamily: 'RobotoBold' }}>
+        <p className="text-lg mt-10 md:text-xl text-gray-700 mx-50 ">
           Сонгинохайрхан дүүргийн засаг даргын тамгын газрын <strong>AgroCity</strong> платформ нь
           оршин суугчдын санал гомдлыг хурдан шийдвэрлэх, хотын дэд бүтцийг илүү ил тод, үр ашигтай удирдах зорилготой.
           Бид иргэдэд илүү ойртсон үйлчилгээ, мэдээллийн нээлттэй байдлыг хангахыг эрхэмлэж ажиллана.
 
-          {/* <p className="text-lg mt-10 md:text-xl text-gray-700 font-roboto-regular " style={{ fontFamily: 'RobotoBold' }}>
-          Сонгинохайрхан дүүргийн засаг даргын тамгын газрын <strong>Агро-Сити</strong> платформ нь
-          оршин суугчдын <br /> санал гомдлыг хурдан шийдвэрлэх, хотын дэд бүтцийг илүү ил тод, <br /> үр ашигтай удирдах зорилготой.
-          Бид иргэдэд илүү ойртсон үйлчилгээ, <br />  мэдээллийн нээлттэй байдлыг хангахыг эрхэмлэж ажиллана.*/}
 
         </p>
 
@@ -77,73 +73,24 @@ export default function AboutUs() {
 
       {/* Stats */}
       {/* <section className="mb-12 bg-gradient-to-r from-white via-gray-400 to-white p-6 rounded-lg"> */}
-        <section className="mb-12 bg-gradient-to-r from-slate-50 via-green-50 to-slate-50  p-6   border-b   border-t border-lime-200">
+      <section className="mb-12 bg-gradient-to-r from-slate-50 via-green-50 to-slate-50  p-6   border-b   border-t border-lime-200">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
           <div>
-            <div className="text-3xl font-roboto-bold text-green-950" style={{ fontFamily: 'RobotoBold' }}>1.200+</div>
-            <div className="text-sm text-green-950 font-roboto-regular mt-1" style={{ fontFamily: 'RobotoBold' }}>Шилжүүлсэн санал</div>
+            <div className="text-3xl font-roboto-bold text-green-950" >1.200+</div>
+            <div className="text-sm text-green-950 font-roboto-regular mt-1" >Шилжүүлсэн санал</div>
           </div>
           <div>
-            <div className="text-3xl font-roboto-bold text-green-950" style={{ fontFamily: 'RobotoBold' }}>85%</div>
-            <div className="text-sm text-green-950 font-roboto-regular mt-1" style={{ fontFamily: 'RobotoBold' }}>Дүн шинжилгээ төгссөн</div>
+            <div className="text-3xl font-roboto-bold text-green-950" >85%</div>
+            <div className="text-sm text-green-950 font-roboto-regular mt-1" >Дүн шинжилгээ төгссөн</div>
           </div>
           <div>
-            <div className="text-3xl font-roboto-bold text-green-950" style={{ fontFamily: 'RobotoBold' }}>5+ жил</div>
-            <div className="text-sm text-green-950 font-roboto-regular mt-1" style={{ fontFamily: 'RobotoBold' }}>Туршлага</div>
+            <div className="text-3xl font-roboto-bold text-green-950" >5+ жил</div>
+            <div className="text-sm text-green-950 font-roboto-regular mt-1" >Туршлага</div>
           </div>
         </div>
       </section>
 
-      {/* Team / Contact */}
-      {/* <section className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2 bg-white p-6 rounded-lg border shadow-sm">
-          <h3 className="text-2xl font-roboto-bold text-gray-900 mb-4">Баг болон үйл ажиллагаа</h3>
-          <p className="text-gray-700 font-roboto-regular mb-4">
-            Бид мэргэжлийн инженер, нийтийн захиргаа, мэдээллийн технологийн багтай хамтран ажилладаг.
-            Хэрэглэгчийн саналд тулгуурлан шинэчлэл, ажлын явц хянах болон тайлан гаргах системийг тасралтгүй сайжруулж байна.
-          </p>
 
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <li className="p-4 border rounded-md">
-              <div className="text-sm text-gray-600">Захирал</div>
-              <div className="font-roboto-bold text-gray-900">Д. Бат-Эрдэнэ</div>
-            </li>
-            <li className="p-4 border rounded-md">
-              <div className="text-sm text-gray-600">Төслийн менежер</div>
-              <div className="font-roboto-bold text-gray-900">С. Мөнх-Эрдэнэ</div>
-            </li>
-            <li className="p-4 border rounded-md">
-              <div className="text-sm text-gray-600">Үйлчилгээ хариуцсан</div>
-              <div className="font-roboto-bold text-gray-900">Н. Энхтуяа</div>
-            </li>
-            <li className="p-4 border rounded-md">
-              <div className="text-sm text-gray-600">Технологи</div>
-              <div className="font-roboto-bold text-gray-900">Ж. Батзориг</div>
-            </li>
-          </ul>
-        </div> */}
-
-      {/* <aside className="bg-white p-6 rounded-lg border shadow-sm">
-          <h4 className="text-lg font-roboto-bold mb-3 text-gray-900">Холбоо барих</h4>
-          <p className="text-sm text-gray-600 mb-3 font-roboto-regular">
-            📧 <a className="text-blue-600" href="mailto:songinokhairkhandistrict@gmail.com">songinokhairkhandistrict@gmail.com</a><br />
-            ☎️ 7017 3203<br />
-            📍 Сонгинохайрхан дүүрэг, Улаанбаатар
-          </p>
-
-          <Link href="/contact" className="block mt-4 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-md">
-            Санал илгээх
-          </Link>
-        </aside> */}
-      {/* </section> */}
-
-      {/* Footer note */}
-      {/* <section className="mt-12 text-sm text-gray-500">
-        <p className="font-roboto-regular">
-          Энэхүү платформ нь иргэдээс ирсэн саналыг бүртгэж, ажлын явцыг хянахад зориулагдсан.
-          Хувийн мэдээллийг хэрхэн ашиглах талаар дэлгэрэнгүйг <Link href="/privacy" className="text-blue-600 underline">Нууцлалын бодлого</Link>-оос үзнэ үү.
-        </p>
-      </section> */}
     </main>
   )
 }
