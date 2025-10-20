@@ -31,9 +31,10 @@ export default function Services() {
   ]
 
   return (
-    <main className="max-w-8xl mx-auto px-10 py-20 ">
+    <main className="max-w-8xl mx-auto px-50 py-20 ">
       {/* Header */}
-      <section className="text-center mb-12">
+      {/* <section className="text-center mb-12"> */}
+      <div className="text-center max-w-3xl mx-auto mb-10">
         <h1 className="text-4xl md:text-4xl  text-gray-900 mb-4 uppercase" style={{ fontFamily: 'RobotoBold' }}>
           Агро Сити төслийн үйлчилгээ
         </h1>
@@ -41,7 +42,8 @@ export default function Services() {
           AgroCity нь хөдөө аж ахуйн орон зайн дижитал шийдлийг нэвтрүүлж, өгөгдөлд суурилсан шийдвэр
           гаргах, эрсдэлийг бууруулах, үр ашгийг нэмэгдүүлэх зорилготой ухаалаг систем юм.
         </p>
-      </section>
+      </div>
+      {/* </section> */}
 
       {/* Service cards */}
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -68,7 +70,7 @@ export default function Services() {
                 {srv.desc}
               </p>
               <div className="mt-4">
-                <button className="text-lime-700 hover:text-blue-800 text-sm font-medium transition">
+                <button className="text-lime-700 hover:text-lime-800 text-sm font-medium transition">
                   Дэлгэрэнгүй →
                 </button>
               </div>

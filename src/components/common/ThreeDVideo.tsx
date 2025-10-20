@@ -1,129 +1,58 @@
-
-
 'use client'
 
-import React, { useState } from 'react'
-import LoadFBXModel from '@/app/MapClient3D/LoadFBXModel'
-import DiagonalBottomRibbon60deg from '../DiagonalRibbon'
-import Link from 'next/link'
-import { Map, Route, Train, Users, Home } from 'lucide-react' // 👈 icon-уудыг импортлолоо
+import React, { Suspense } from 'react'
+import LoadFBXModel from '../MapClient3D/LoadFBXModel'
+import { Loader2 } from 'lucide-react'
 
-const stats = [
-    { value: '24.022 га', label: 'Талбайн хэмжээ', icon: Map },
-    { value: '132 км', label: 'Асфальтан зам', icon: Route },
-    { value: '114.9 км', label: 'Төмөр зам', icon: Train },
-    { value: '11.912', label: 'Газар эзэмшигч', icon: Users },
-    { value: '14.917', label: 'Газар өмчлөгч', icon: Home },
-]
-
-const ThreeDVideo = () => {
-    const [showModel, setShowModel] = useState(false);
-
+const TwoDVideo = () => {
     return (
-        <div className='relative bg-white ' >
-            <div className='flex flex-column md:grid-cols-5 pl-50 pr-50 pt-10 bg-green-50'>
-                <div className=" w-2/5 mx-auto pt-10 pb-5 relative bg-green-50">
-                    <div className="flex flex-col items-left text-left pr-10">
-                        <h1 className=" md:text-5xl text-black uppercase" style={{ fontFamily: 'RobotoBold' }}>
-                            Агро-Сити 3D загвар
-                        </h1>
-                        {/* <p className="text-2xl md:text-2xl  text-green-950  pt-5" style={{ fontFamily: 'RobotoBold' }}>
-                                    3D дижитал ихэр хот
-                                </p> */}
-                        <p className="mt-4 max-w-xl md:text-xl text-justify text-green-950" style={{ fontFamily: 'RobotoRegular' }}>
-                            Агро-Сити эдийн засгийн тусгай бүсийн 3D/2D газрын зураг нь орон зайн бодит өгөгдөл, өмчлөлийн бүртгэл, дэд бүтцийн мэдээлэл, байгаль орчны бүх өгөгдлийг нэгтгэсэн интерактив гео систем юм. Энэхүү зураглалаар хэрэглэгч: Газрын эзэмшил, ашиглалт, дэд бүтцийн нөхцөл байдлыг хялбар харьцуулах, Төслийн төлөвлөлт, хөрөнгө оруулалтын шийдвэр гаргахад ашиглах, дүн шинжилгээ хийх боломжтой.</p>
-                        <div className='flex flex-row '>
-                            <div className="mt-5 flex gap-3 items-center flex-center">
-                                <Link
-                                    href="/MapClient3D"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    style={{ fontFamily: 'RobotoBold' }}
-                                    className="inline-flex items-center gap-2 border px-10 py-3 border-lime-700 rounded-md text-white bg-lime-700 hover:bg-lime-700/70 transition"
-                                >
-                                    3D үзэх
-                                </Link>
-                            </div>
-                            <div className="mt-5 flex gap-3 items-center flex-center pl-5">
-                                <Link
-                                    href="/MapClient"
-                                    // href="/MapArcGISLayers"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 border border-lime-700 px-10 py-3 rounded-md text-green-950 bg-green-50 hover:bg-green-100 transition"
-                                >
-                                    2D үзэх
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className=" bg-green-50 w-3/5 pt-20">
-
-                    <iframe
-                        className="w-full aspect-video"
-                        src="https://www.youtube.com/embed/XXXXXXXXX"
-                        title="AgroCity demo"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    />
-                </div>
+        <section className="relative w-full bg-slate-50 py-10 px-50">
+            {/* Гарчиг хэсэг */}
+            <div className="text-center max-w-3xl mx-auto mb-10">
+                <h1
+                    className="text-3xl md:text-4xl font-roboto-bold text-green-950 uppercase mb-4 tracking-wide"
+                    style={{ fontFamily: 'RobotoBold' }}
+                >
+                    AgroCity 3D загвар
+                </h1>
+                <p
+                    className="text-base md:text-lg text-green-950 leading-relaxed font-roboto-regular"
+                    style={{ fontFamily: 'RobotoRegular' }}
+                >
+                    AgroCity-ийн 3D дижитал ихэр нь ухаалаг хөдөө аж ахуйн орон зайн шийдвэр гаргах шинэ түвшнийг нээж өгнө.
+                    Бодит мэдээлэлд тулгуурлан төлөвлө, дүн шинжил, эрсдэлээ бууруул.
+                </p>
             </div>
 
-            {/* --- Stats section --- */}
-            <div className="w-full h-90 bg-green-50 pl-10 pr-10 pt-18">
-                <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
-                    {stats.map((item, index) => {
-                        const Icon = item.icon;
-                        return (
-                            <div
-                                key={index}
-                                className="flex flex-col items-center justify-center py-3"
-                            >
-                                <Icon className="w-10 h-10 text-lime-700 mb-2" /> {/* 👈 icon нэмсэн */}
-                                <p className="md:text-4xl text-green-950" style={{ fontFamily: 'RobotoBold' }}>
-                                    {item.value}
-                                </p>
-                                <p className="mt-1 text-green-950 md:text-base uppercase" style={{ fontFamily: 'RobotoRegular' }}>
-                                    {item.label}
-                                </p>
+            {/* 3D Model хэсэг */}
+            <div className="flex flex-col items-center justify-center">
+                <div className="relative w-full  h-[600px] bg-white  shadow-lg flex items-center justify-center overflow-hidden">
+                    <Suspense
+                        fallback={
+                            <div className="flex items-center justify-center text-green-800">
+                                <Loader2 className="animate-spin w-8 h-8 mr-2" /> Уншиж байна...
                             </div>
-                        )
-                    })}
-                </div>
-            </div>
-            {/* --- Bottom ribbon --- */}
-            <div className="absolute left-0 right-0 bottom-0 z-10 pointer-events-none">
-                <DiagonalBottomRibbon60deg
-                    height={160}
-                    diagonalHeight={100}
-                    angle={80}
-                    overlayOffset={25}
-                    // orientation='bottom-left'
-                    baseGradient={["#437a11", "#437a11"]}
-                    overlayGradient={["#f0fdf4", "#f0fdf4"]}
-                />
-            </div>
-
-            {/* --- FBX Modal --- */}
-            {showModel && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
-                    <div className="bg-white rounded-2xl shadow-2xl p-4 relative">
-                        <button
-                            onClick={() => setShowModel(false)}
-                            className="absolute top-3 right-3 text-slate-600 hover:text-black"
-                        >
-                            ✕
-                        </button>
+                        }
+                    >
                         <LoadFBXModel />
+                    </Suspense>
+                </div>
+
+                {/* Доорх ангиллын холбоосууд */}
+                <div className=" flex flex-col md:flex-row justify-center border-b bg-slate-100 items-stretch md:items-center gap-4 w-full max-w-5xl mx-auto text-green-950 font-roboto-bold text-lg">
+                    <div className="w-full md:w-1/3 bg-slate-100  border-slate-300 py-4 px-6 text-center">
+                        <span className="block" style={{ fontFamily: 'RobotoBold' }}>Газар зүйн давхрага</span>
+                    </div>
+                    <div className="w-full md:w-1/3 bg-slate-100  border-slate-300 py-4 px-6 text-center">
+                        <span className="block" style={{ fontFamily: 'RobotoBold' }}>Дэд бүтэц</span>
+                    </div>
+                    <div className="w-full md:w-1/3 bg-slate-100  border-slate-300 py-4 px-6 text-center">
+                        <span className="block" style={{ fontFamily: 'RobotoBold' }}>Хөдөө аж ахуй</span>
                     </div>
                 </div>
-            )}
-        </div>
+            </div>
+        </section>
     )
 }
 
-export default ThreeDVideo
-
-
+export default TwoDVideo
