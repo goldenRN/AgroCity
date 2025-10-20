@@ -9,11 +9,11 @@ import Link from 'next/link'
 import { Map, Route, Train, Users, Home } from 'lucide-react' // 👈 icon-уудыг импортлолоо
 
 const stats = [
-    { value: '24.022 га', label: 'Талбайн хэмжээ', icon: Map },
+    { value: '24,022 га', label: 'Талбайн хэмжээ', icon: Map },
     { value: '132 км', label: 'Асфальтан зам', icon: Route },
-    { value: '114.9 км', label: 'Төмөр зам', icon: Train },
-    { value: '11.912', label: 'Газар эзэмшигч', icon: Users },
-    { value: '14.917', label: 'Газар өмчлөгч', icon: Home },
+    { value: '114,9 км', label: 'Төмөр зам', icon: Train },
+    { value: '11,912', label: 'Газар эзэмшигч', icon: Users },
+    { value: '14,917', label: 'Газар өмчлөгч', icon: Home },
 ]
 
 const ThreeDVideo = () => {
@@ -25,12 +25,12 @@ const ThreeDVideo = () => {
                 <div className=" w-2/5 mx-auto pt-10 pb-5 relative bg-green-50">
                     <div className="flex flex-col items-left text-left pr-10">
                         <h1 className=" md:text-5xl text-black uppercase" >
-                            Агро-Сити 3D загвар
+                            Агро-Сити 
                         </h1>
-                        {/* <p className="text-2xl md:text-2xl  text-green-950  pt-5" style={{ fontFamily: 'RobotoBold' }}>
-                                    3D дижитал ихэр хот
-                                </p> */}
-                        <p className="mt-4 max-w-xl md:text-xl text-justify text-green-950" >
+                        <p className="text-xl md:text-2xl  text-green-950  pt-5" >
+                                    Дижитал ихэр хот
+                                </p>
+                        <p className="mt-4 max-w-md md:text-md text-justify text-green-950" >
                             Агро-Сити эдийн засгийн тусгай бүсийн 3D/2D газрын зураг нь орон зайн бодит өгөгдөл, өмчлөлийн бүртгэл, дэд бүтцийн мэдээлэл, байгаль орчны бүх өгөгдлийг нэгтгэсэн интерактив гео систем юм. Энэхүү зураглалаар хэрэглэгч: Газрын эзэмшил, ашиглалт, дэд бүтцийн нөхцөл байдлыг хялбар харьцуулах, Төслийн төлөвлөлт, хөрөнгө оруулалтын шийдвэр гаргахад ашиглах, дүн шинжилгээ хийх боломжтой.</p>
                         <div className='flex flex-row '>
                             <div className="mt-5 flex gap-3 items-center flex-center">
@@ -58,7 +58,7 @@ const ThreeDVideo = () => {
                     </div>
                 </div>
 
-                <div className=" bg-green-50 w-3/5 pt-20">
+                <div className=" bg-green-50 w-3/5 pt-20 pl-8">
 
                     <iframe
                         className="w-full aspect-video"

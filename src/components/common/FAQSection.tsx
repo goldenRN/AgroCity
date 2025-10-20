@@ -13,7 +13,7 @@ import { ChevronDown, Send } from "lucide-react";
 const defaultFaqs = [
   {
     q: "Энэ вэб сайт ямар зорилготой вэ?",
-    a: "AgroCity вэб нь төслийн мэдээлэл, дижитал ихэр (3D), үйлчилгээнүүд болон холбогдох түншүүдийг танилцуулах зорилготой.",
+    a: "Агро-Сити вэб нь төслийн мэдээлэл, дижитал ихэр (3D), үйлчилгээнүүд болон холбогдох түншүүдийг танилцуулах зорилготой.",
   },
   {
     q: "Төслийн 3D загвар вэб дээр хэрхэн харуулах вэ?",
@@ -57,14 +57,14 @@ export default function FAQSectionAgroCity({
     // <section className="max-w-6xl mx-auto px-4 py-12">
     <section className="bg-gradient-to-b from-white to-green-50 py-16 px-50 md:px-50">
       <h2 className="text-2xl md:text-3xl  text-slate-800 mb-6 text-center upercase">
-        Санал хүсэлт
+        Түгээмэл асуулт хариулт
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
         {/* LEFT: FAQ list */}
-        <div>
-          <span > Түгээмэл асуулт хариулт</span>
-          <div className="space-y-2 mt-8">
+        {/* <div> */}
+          {/* <span > Түгээмэл асуулт хариулт</span> */}
+          <div className="space-y-2 mt-5">
             {faqs.map((f, i) => {
               const open = openIndex === i;
               return (
@@ -98,10 +98,10 @@ export default function FAQSectionAgroCity({
               );
             })}
           </div>
-        </div>
+        {/* </div> */}
 
         {/* RIGHT: Illustration / image */}
-        <div className="w-full ml-10">
+        {/* <div className="w-full ml-10">
           <form onSubmit={handleSubmit} className="space-y-6 text-left">
             <div className="w-full">
               <label className="block text-green-950 mb-2 ">Нэр</label>
@@ -149,21 +149,21 @@ export default function FAQSectionAgroCity({
                 Илгээх
               </button>
             </div>
-          </form>
-          {/* <div className="w-full max-w-lg bg-slate-50 rounded-lg overflow-hidden shadow-sm"> */}
-          {/* <img
-              src={imageSrc}
-              alt={imageAlt}
-              className=" object-cover"
-              loading="lazy"
-            /> */}
+          </form> */}
+        <div className="w-full max-w-lg bg-slate-50 rounded-lg overflow-hidden shadow-sm mt-5">
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            className=" object-cover"
+            loading="lazy"
+          />
           {/* <div className="px-4 py-3">
-              <p className="text-sm text-slate-600">
-                АгроСити төсөл — танилцуулгын зураг. (3D загвар, үйлчилгээ, газрын зураг ба холбогдох мэдээлэл энд байрлана.)
-              </p>
-            </div> */}
-          {/* </div> */}
+            <p className="text-sm text-slate-600">
+              АгроСити төсөл — танилцуулгын зураг. (3D загвар, үйлчилгээ, газрын зураг ба холбогдох мэдээлэл энд байрлана.)
+            </p>
+          </div> */}
         </div>
+
       </div>
     </section>
   );

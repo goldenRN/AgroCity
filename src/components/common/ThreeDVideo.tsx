@@ -72,7 +72,7 @@ const ThreeDVideo = () => {
 
   // ✅ тухайн model-д тохирох file path
   const modelFiles: Record<typeof selectedModel, string> = {
-    geo: '/models/test10.fbx',
+    geo: '/models/webtest02.fbx',
     infra: '/models/nogoon_baiguulamj.fbx',
     agri: '/models/test10.fbx',
   }
@@ -89,14 +89,13 @@ const ThreeDVideo = () => {
       {/* Гарчиг */}
       <div className="text-center max-w-3xl mx-auto mb-10">
         <h1
-          className="text-3xl md:text-4xl font-roboto-bold text-green-950 uppercase mb-4 tracking-wide"
-          style={{ fontFamily: 'RobotoBold' }}
+          className="text-3xl md:text-4xl  text-green-950 uppercase mb-4 tracking-wide"
         >
           АГРО-СИТИ 3D загвар
         </h1>
         <p
-          className="text-base md:text-lg text-green-950 leading-relaxed font-roboto-regular"
-          style={{ fontFamily: 'RobotoRegular' }}
+          className="text-base md:text-lg text-green-950 leading-relaxed "
+
         >
           АГРО-СИТИ-ийн 3D дижитал ихэр нь ухаалаг хөдөө аж ахуйн орон зайн шийдвэр гаргах шинэ түвшнийг нээж өгнө.
           Бодит мэдээлэлд тулгуурлан төлөвлө, дүн шинжил, эрсдэлээ бууруул.

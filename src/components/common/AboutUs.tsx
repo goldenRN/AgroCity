@@ -78,7 +78,7 @@ export default function AboutUs() {
       <section className="mb-12 bg-gradient-to-r from-slate-50 via-green-50 to-slate-50  p-6   border-b   border-t border-lime-200">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
           <div>
-            <div className="text-3xl font-roboto-bold text-green-950" >1.200+</div>
+            <div className="text-3xl font-roboto-bold text-green-950" >1,200+</div>
             <div className="text-sm text-green-950 font-roboto-regular mt-1" >Шилжүүлсэн санал</div>
           </div>
           <div>
