@@ -35,8 +35,8 @@ const ThreeDVideo = () => {
                         <div className='flex flex-row '>
                             <div className="mt-5 flex gap-3 items-center flex-center">
                                 <Link
-                                    href="/MapClient3D"
-                                    target="_blank"
+                                    href="#twoDVideo"
+                                   
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 border px-10 py-3 border-lime-700 rounded-md text-white bg-lime-700 hover:bg-lime-700/70 transition"
                                 >
@@ -45,9 +45,9 @@ const ThreeDVideo = () => {
                             </div>
                             <div className="mt-5 flex gap-3 items-center flex-center pl-5">
                                 <Link
-                                    href="/MapClient"
+                                    href="#MapWithSidebar"
                                     // href="/MapArcGISLayers"
-                                    target="_blank"
+                            
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 border border-lime-700 px-10 py-3 rounded-md text-green-950 bg-green-50 hover:bg-green-100 transition"
                                 >
