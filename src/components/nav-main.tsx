@@ -42,12 +42,18 @@ export function NavMain({
           <Collapsible key={item.title} asChild defaultOpen={item.isActive}>
             <SidebarMenuItem>
               <SidebarMenuButton asChild className="group flex items-center gap-2 px-3 py-1.5 rounded-md transition-all duration-200 hover:bg-blue-100" tooltip={item.title}>
-                {/* <a href={item.url}> */}
+                <a href={item.url}>
                 {/* <Link href={item.url}> */}
-                {/* <item.icon /> */}
+                <item.icon />
                 <span>{item.title}</span>
-                {/* </a> */}
+                </a>
               </SidebarMenuButton>
+              {/* <div className="group flex items-center gap-2 px-3  rounded-md transition-all duration-200 hover:bg-blue-100">
+                <a href={item.url} className=" flex flex-row items-center gap-2 py-1.5 rounded-md transition-all duration-200 hover:bg-blue-100">
+                  <item.icon size={15} />
+                  <span>{item.title}</span>
+                </a>
+              </div> */}
               {item.items?.length ? (
                 <>
                   <CollapsibleTrigger asChild>

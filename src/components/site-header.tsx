@@ -19,10 +19,11 @@ export function SiteHeader() {
   const { toggleSidebar } = useSidebar()
 
   return (
-    <header className="bg-background sticky top-0 z-50 flex w-full items-center border-b">
+    <header className="bg-lime-700 sticky top-0 z-50 flex w-full items-center border-b py-3">
+    {/* <header className="flex items-center justify-between border-b px-6 py-3 bg-white"> */}
       <div className="flex h-(--header-height) w-full items-center gap-2 px-4">
         <Button
-          className="h-8 w-8"
+          className="h-8 w-8 bg-white"
           variant="ghost"
           size="icon"
           onClick={toggleSidebar}

@@ -31,7 +31,7 @@ export function NavProjects({
           <SidebarMenuItem key={item.name}>
             <SidebarMenuButton asChild className="group flex items-center gap-2 px-3 py-1.5 rounded-md transition-all duration-200 hover:bg-blue-100">
               <a href={item.url}>
-                {/* <item.icon /> */}
+                <item.icon />
                 <span>{item.name}</span>
               </a>
             </SidebarMenuButton>

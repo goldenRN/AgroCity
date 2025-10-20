@@ -1,43 +1,30 @@
 "use client";
-export const iframeHeight = "800px"
-export const description = "A sidebar with a header and a search form."
+
+export const iframeHeight = "800px";
+export const description = "A sidebar with a header and a search form.";
+
 import { AppSidebar } from "@/components/app-sidebar";
 import { SiteHeader } from "@/components/site-header";
-import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"; // ← нэмнэ
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
-
-    <SidebarProvider className="flex flex-col ">
-      <div className="[--header-height:calc(--spacing(14))] w-full">
-        <SiteHeader />
-      </div>
-      <div className="flex flex-1 ">
+    <SidebarProvider>
+      {/* Хоёр багана: sidebar + main хэсэг */}
+      <div className="grid grid-cols-[250px_1fr] h-screen w-full">
+        {/* Зүүн талын sidebar */}
         <AppSidebar />
-        <SidebarInset >
-          main
-          <main className="flex-1 overflow-y-auto bg-gray-50 p-2">
+
+        {/* Баруун талын main хэсэг */}
+        <div className="flex flex-col h-full w-full">
+          {/* Header дээр */}
+          <SiteHeader />
+          {/* Доорх контент хэсэг */}
+          <main className="flex-1 overflow-y-auto p-6 bg-gray-50">
             {children}
           </main>
-
-        </SidebarInset>
+        </div>
       </div>
-    </SidebarProvider >
-
-    // <div className="[--header-height:calc(--spacing(14))] w-full">
-    //   <SidebarProvider className="flex flex-col ">
-    //     <SiteHeader />
-    //     <div className="flex flex-1">
-    //       {/* Sidebar */}
-
-    //       <AppSidebar />
-
-    //       {/* Main content */}
-    //       <main className="flex-1 overflow-y-auto bg-gray-50 p-4">
-    //         {children}
-    //       </main>
-    //     </div>
-    //   </SidebarProvider>
-    // </div>
+    </SidebarProvider>
   );
 }
