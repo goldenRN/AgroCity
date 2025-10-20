@@ -78,3 +78,4 @@ export default function LoadFBXModel() {
 
   return <div ref={mountRef} className="w-full h-full" />;
 }
+
