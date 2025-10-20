@@ -36,7 +36,7 @@ const defaultFaqs = [
 export default function FAQSectionAgroCity({
   faqs = defaultFaqs,
   imageSrc = "/poster.jpg",
-  imageAlt = "AgroCity төсөөлөл",
+  imageAlt = "Агро-Сити төсөөлөл",
 }) {
   const [formData, setFormData] = useState({
     name: "",

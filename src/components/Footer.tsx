@@ -251,8 +251,7 @@ export default function Footer() {
                 <div className="flex items-center gap-3">
                     <p >
                         © 2025{" "}
-                        <span className="text-green-950 font-semibold" >АГРО-СИТИ</span>. Бүх
-                        эрх хуулиар хамгаалагдсан.
+                        <span className="text-green-950 font-semibold" >АГРО-СИТИ ЭЗТБ</span>. 
                     </p>
                     {/* <span className="font-semibold text-gray-700">Agro City</span>
                     <a href="#" className="hover:underline">Privacy</a>
@@ -262,10 +261,11 @@ export default function Footer() {
                 <div className="text-center md:text-center text-sm text-green-200">
 
                     <p className="text-green-950 mt-1" >
-                         Вэб хуудас хийсэн{" "}
-                        <span className="text-lime-700 font-semibold hover:underline">
+                         Бүх
+                        эрх хуулиар хамгаалагдсан.{" "}
+                        {/* <span className="text-lime-700 font-semibold hover:underline">
                             Ember ХХК
-                        </span>
+                        </span> */}
                     </p>
                 </div>
             </div>

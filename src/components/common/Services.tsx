@@ -36,10 +36,10 @@ export default function Services() {
       {/* <section className="text-center mb-12"> */}
       <div className="text-center max-w-3xl mx-auto mb-10">
         <h1 className="text-4xl md:text-4xl  text-gray-900 mb-4 uppercase">
-          Агро Сити төслийн үйлчилгээ
+          Агро-Сити төслийн үйлчилгээ
         </h1>
         <p className="text-lg md:text-xl text-gray-700 mx-auto" >
-          AgroCity нь хөдөө аж ахуйн орон зайн дижитал шийдлийг нэвтрүүлж, өгөгдөлд суурилсан шийдвэр
+          Агро-Сити нь хөдөө аж ахуйн орон зайн дижитал шийдлийг нэвтрүүлж, өгөгдөлд суурилсан шийдвэр
           гаргах, эрсдэлийг бууруулах, үр ашгийг нэмэгдүүлэх зорилготой ухаалаг систем юм.
         </p>
       </div>
