@@ -91,7 +91,7 @@ import dynamic from "next/dynamic";
 
 // Leaflet map-г зөв SSR-гүйгээр дуудахын тулд dynamic ашиглана
 const GeojsonMap = dynamic(() => import("@/app/MapClient/GeojsonMap"), {
-  ssr: false,
+    ssr: false,
 });
 
 
@@ -120,33 +120,51 @@ export default function MapWithSidebar({ geojson }) {
     const [selectedName, setSelectedName] = useState(null);
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-5 pl-50 pr-50">
-            <div className="col-span-1 bg-slate-100 pl-2 rounded shadow overflow-auto">
-                {/* <h2 className="font-bold mb-3">Нэр</h2> */}
-                <ul className="space-y-1">
-                    {names.map((name) => (
-                        <li key={name}>
-                            <button
-                                onClick={() => setSelectedName(selectedName === name ? null : name)}
-                                className={`w-full flex items-center gap-3 p-1 rounded text-left transition ${selectedName === name ? "bg-blue-100 font-semibold" : "hover:bg-slate-200"
-                                    }`}
-                            >
-                                {/* color swatch */}
-                                <span
-                                    className="w-4 h-2 rounded-sm flex-shrink-0"
-                                    style={{ background: colorMap[name], boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.06)" }}
-                                />
-                                <span className="truncate text-sm">{name}</span>
-                            </button>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+        <section>
+            <div className="text-center max-w-3xl mx-auto mb-10">
+                <h1
+                    className="text-3xl md:text-4xl font-roboto-bold text-green-950 uppercase mb-4 tracking-wide"
 
-            <div className="col-span-4 h-[700px] bg-white shadow-lg">
-                {/* GeojsonMap expects props: data, colorMap, selectedName */}
-                <GeojsonMap data={geojson} colorMap={colorMap} selectedName={selectedName} />
+                >
+                    АГРО-СИТИ 2D газрын зураг
+                </h1>
+                <p
+                    className="text-base md:text-lg text-green-950 leading-relaxed font-roboto-regular"
+
+                >
+                    АГРО-СИТИ-ийн 3D дижитал ихэр нь ухаалаг хөдөө аж ахуйн орон зайн шийдвэр гаргах шинэ түвшнийг нээж өгнө.
+                    Бодит мэдээлэлд тулгуурлан төлөвлө, дүн шинжил, эрсдэлээ бууруул.
+                </p>
             </div>
-        </div>
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-5 pl-50 pr-50">
+
+                <div className="col-span-1 bg-slate-100 pl-2 rounded shadow overflow-auto">
+                    {/* <h2 className="font-bold mb-3">Нэр</h2> */}
+                    <ul className="space-y-1">
+                        {names.map((name) => (
+                            <li key={name}>
+                                <button
+                                    onClick={() => setSelectedName(selectedName === name ? null : name)}
+                                    className={`w-full flex items-center gap-3 p-1 rounded text-left transition ${selectedName === name ? "bg-blue-100 font-semibold" : "hover:bg-slate-200"
+                                        }`}
+                                >
+                                    {/* color swatch */}
+                                    <span
+                                        className="w-4 h-2 rounded-sm flex-shrink-0"
+                                        style={{ background: colorMap[name], boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.06)" }}
+                                    />
+                                    <span className="truncate text-sm">{name}</span>
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                <div className="col-span-4 h-[700px] bg-white shadow-lg">
+                    {/* GeojsonMap expects props: data, colorMap, selectedName */}
+                    <GeojsonMap data={geojson} colorMap={colorMap} selectedName={selectedName} />
+                </div>
+            </div>
+        </section>
     );
 }

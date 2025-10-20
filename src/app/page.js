@@ -3,7 +3,7 @@
 'use client';
 import HeaderVideo from '@/components/common/HeaderVideo';
 import MapWithSidebar from '@/components/common/MapWithSidebar';
-import TwoDVideo from '@/components/common/TwoDVideo';
+import ThreeDVideo from '@/components/common/ThreeDVideo';
 import AboutUs from '@/components/common/AboutUs';
 import Services from '@/components/common/Services';
 import FAQSection from '@/components/common/FAQSection';
@@ -61,7 +61,7 @@ export default function Home() {
       </div>
       {/* 2D Video секц */}
       <section id="twoDVideo">
-        <TwoDVideo />
+        <ThreeDVideo />
       </section>
 
       {/* Services секц */}
@@ -74,9 +74,9 @@ export default function Home() {
     </section>
     
         {/* Law секц */ }
-      <section id="law">
+      {/* <section id="law">
         <Law />
-      </section>
+      </section> */}  
 
  <section id="FAQSection">
       <FAQSection/>

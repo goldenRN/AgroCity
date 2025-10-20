@@ -92,13 +92,13 @@ const ThreeDVideo = () => {
           className="text-3xl md:text-4xl font-roboto-bold text-green-950 uppercase mb-4 tracking-wide"
           style={{ fontFamily: 'RobotoBold' }}
         >
-          AgroCity 3D загвар
+          АГРО-СИТИ 3D загвар
         </h1>
         <p
           className="text-base md:text-lg text-green-950 leading-relaxed font-roboto-regular"
           style={{ fontFamily: 'RobotoRegular' }}
         >
-          AgroCity-ийн 3D дижитал ихэр нь ухаалаг хөдөө аж ахуйн орон зайн шийдвэр гаргах шинэ түвшнийг нээж өгнө.
+          АГРО-СИТИ-ийн 3D дижитал ихэр нь ухаалаг хөдөө аж ахуйн орон зайн шийдвэр гаргах шинэ түвшнийг нээж өгнө.
           Бодит мэдээлэлд тулгуурлан төлөвлө, дүн шинжил, эрсдэлээ бууруул.
         </p>
       </div>

@@ -167,7 +167,7 @@ export default function Footer() {
             {/* --- Top social row --- */}
             <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center gap-4">
                 <h3 className="text-lg font-medium">Бидэнтэй холбогдох</h3>
-                <div className="flex gap-5 text-2xl ml-10">
+                <div className="flex gap-5 text-xl ml-10">
                     <a href="#" className="text-pink-600 hover:scale-110 transition-transform"><FaInstagram /></a>
                     <a href="#" className="text-black hover:scale-110 transition-transform"><FaXTwitter /></a>
                     <a href="#" className="text-red-600 hover:scale-110 transition-transform"><FaYoutube /></a>
@@ -182,8 +182,7 @@ export default function Footer() {
             <section className=" ml-50 mr-50 grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 mb-10 tems-center">
                 <div className=" text-left">
                     <h3
-                        className="text-2xl text-green-950 mb-5"
-                        style={{ fontFamily: 'RobotoBold' }}
+                        className="text-xl text-green-950 mb-5"
                     >
                         Холбоо барих
                     </h3>
@@ -194,7 +193,7 @@ export default function Footer() {
                             <a
                                 href="mailto:agrocity@ub.gov.mn"
                                 className="hover:text-lime-700 transition-colors duration-200"
-                                style={{ fontFamily: 'RobotoBold' }}
+                              
                             >
                                 agrocity@ub.gov.mn
                             </a>
@@ -213,31 +212,31 @@ export default function Footer() {
                 </div>
 
                 <div className="  text-left pl-10">
-                    <h3 className="text-2xl font-roboto-bold text-green-950 mb-5" style={{ fontFamily: 'RobotoBold' }}>Хаяг байрлал</h3>
+                    <h3 className="text-xl  text-green-950 mb-5" >Хаяг байрлал</h3>
                     <ul className="space-y-3 text-green-950 items-left text-left ">
                         <li className="flex justify-left md:justify-left items-left gap-2">
                             <MapPinIcon size={18} className="text-green-950" />
-                            <span style={{ fontFamily: 'RobotoBold' }}>Улаанбаатар хот, Монгол улс</span>
+                            <span>Улаанбаатар хот, Монгол улс</span>
                         </li>
-                        <li style={{ fontFamily: 'RobotoBold' }}>Нийслэлийн хөгжлийн газар</li>
+                        <li >Нийслэлийн хөгжлийн газар</li>
                     </ul>
                 </div>
                 <div className="  text-left pl-20">
-                    <h3 className="text-2xl font-roboto-bold text-green-950 mb-2" style={{ fontFamily: 'RobotoBold' }}>Холбоосууд</h3>
-                    <ul className="text-base text-green-950 list-disc list-inside space-y-1" style={{ fontFamily: 'RobotoRegular' }}>
+                    <h3 className="text-xl text-green-950 mb-5" >Холбоосууд</h3>
+                    <ul className="text-base text-green-950 list-disc list-inside space-y-1" >
                         
                         <li>
-                            <Link href="/services" className="hover:text-green-950 transition" style={{ fontFamily: 'RobotoBold' }}>
+                            <Link href="/services" className="hover:text-green-950 transition" >
                                 Санал хүсэлт
                             </Link>
                         </li>
                         <li>
-                            <Link href="/law" className="hover:text-green-950 transition" style={{ fontFamily: 'RobotoBold' }}>
+                            <Link href="/law" className="hover:text-green-950 transition">
                                 Хууль, эрх зүй
                             </Link>
                         </li>
                         <li>
-                            <Link href="/privacy" className="hover:text-green-950 transition" style={{ fontFamily: 'RobotoBold' }}>
+                            <Link href="/privacy" className="hover:text-green-950 transition">
                                 Нууцлалын бодлого
                             </Link>
                         </li>
@@ -250,7 +249,7 @@ export default function Footer() {
             {/* --- Bottom row --- */}
             <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-sm text-green-950">
                 <div className="flex items-center gap-3">
-                    <p style={{ fontFamily: 'RobotoBold' }}>
+                    <p >
                         © 2025{" "}
                         <span className="text-green-950 font-semibold" >АГРО-СИТИ</span>. Бүх
                         эрх хуулиар хамгаалагдсан.
@@ -262,7 +261,7 @@ export default function Footer() {
                 {/* Хуулийн хэсэг */}
                 <div className="text-center md:text-center text-sm text-green-200">
 
-                    <p className="text-green-950 mt-1" style={{ fontFamily: 'RobotoBold' }}>
+                    <p className="text-green-950 mt-1" >
                          Вэб хуудас хийсэн{" "}
                         <span className="text-lime-700 font-semibold hover:underline">
                             Ember ХХК
