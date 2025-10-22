@@ -56,15 +56,15 @@ const data = {
       icon: SquareTerminal,
       items: [
         {
-          title: "Тэмдэглэгээ ",
-          url: "/admin/register/mark",
-        },
-        {
           title: "Меню ",
           url: "/admin/register/category",
         },
         {
-          title: "Тоон үзүүлэлтийн нэршил",
+          title: "Тоон үзүүлэлт",
+          url: "/admin/register/statistic",
+        },
+         {
+          title: "Түгээмэл асуулт хариулт",
           url: "/admin/register/statistic",
         },
       ],
@@ -123,16 +123,31 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" tooltip="Home">
+              <div className="flex flex-col items-center justify-center gap-1">
+                <a href="/admin" className="flex flex-col items-center gap-1">
+                  {/* <div className="bg-[#306c12] text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+                    <Image src="/agro_log.png" width={50} height={50} alt="logo" />
+                  </div> */}
+                  <div className="grid flex-1 text-left text-sm leading-tight">
+                    <span className="truncate font-medium">Agro City</span>
+                    <span className="truncate text-xs">Эдийн засгийн тусгай бүс</span>
+                  </div>
+                </a>
+              </div>
+            </SidebarMenuButton>
+
+            {/* <SidebarMenuButton size="lg" asChild>
               <a href="/admin">
-
-                <Image src="/agro_log.png" width={50} height={50} alt="logo" />
-
+                <div className="bg-[#306c12] text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+                 
+                    <Image src="/agro_log.png" width={50} height={50} alt="logo" />
+                </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-medium">Agro City</span>
                   <span className="truncate text-xs">Эдийн засгийн тусгай бүс</span>
                 </div>
               </a>
-            </SidebarMenuButton>
+            </SidebarMenuButton> */}
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
