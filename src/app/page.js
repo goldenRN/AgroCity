@@ -9,7 +9,7 @@ import Services from '@/components/common/Services';
 import FAQSection from '@/components/common/FAQSection';
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
-import Law from '@/components/common/Law';
+//import ProgramLisence from '@/components/common/Law';
 import { usePathname } from 'next/navigation';
 
 
@@ -60,7 +60,7 @@ export default function Home() {
         />
       </div>
       {/* 2D Video секц */}
-      <section id="twoDVideo">
+      <section id="threeDVideo">
         <ThreeDVideo />
       </section>
 
@@ -74,9 +74,9 @@ export default function Home() {
     </section>
     
         {/* Law секц */ }
-      {/* <section id="law">
-        <Law />
-      </section> */}  
+     {/* <section id="programLisence">
+        <ProgramLisence />
+      </section>   */}
 
  <section id="FAQSection">
       <FAQSection/>
