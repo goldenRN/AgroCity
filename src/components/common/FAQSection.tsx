@@ -1,19 +1,14 @@
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
 
-/**
- * FAQSectionAgroCity
- * - left: FAQ list (minimal accordion)
- * - right: image / illustration for the AgroCity project
- *
- * Usage:
- * <FAQSectionAgroCity imageSrc="/images/agrocity-hero.jpg" imageAlt="AgroCity 3D загвар" />
- */
+
+'use client'
+
+import { useState } from "react";
+import { ChevronDown, Send } from "lucide-react";
 
 const defaultFaqs = [
   {
     q: "Энэ вэб сайт ямар зорилготой вэ?",
-    a: "AgroCity вэб нь төслийн мэдээлэл, дижитал ихэр (3D), үйлчилгээнүүд болон холбогдох түншүүдийг танилцуулах зорилготой.",
+    a: "Агро-Сити вэб нь төслийн мэдээлэл, дижитал ихэр (3D), үйлчилгээнүүд болон холбогдох түншүүдийг танилцуулах зорилготой.",
   },
   {
     q: "Төслийн 3D загвар вэб дээр хэрхэн харуулах вэ?",
@@ -36,70 +31,78 @@ const defaultFaqs = [
 export default function FAQSectionAgroCity({
   faqs = defaultFaqs,
   imageSrc = "/poster.jpg",
-  imageAlt = "AgroCity төсөөлөл",
+  imageAlt = "Агро-Сити төсөөлөл",
 }) {
-  const [openIndex, setOpenIndex] = useState<number | null>(0); // эхлээд 1-р нээлттэй байлгах бол 0 эсвэл null
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const handleChange = (e: any) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    console.log("Feedback sent:", formData);
+  };
+
   return (
-    // <section className="max-w-6xl mx-auto px-4 py-12">
-     <section className="bg-gradient-to-b from-white to-green-50 py-16 px-50 md:px-50">
-      <h2 className="text-2xl md:text-3xl  text-slate-800 mb-6 text-center upercase">
+    <section className="bg-gradient-to-b from-white to-green-50 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-10">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl text-slate-800 mb-8 text-center uppercase">
         Түгээмэл асуулт хариулт
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start max-w-7xl mx-auto">
         {/* LEFT: FAQ list */}
-        <div className="space-y-2">
+        <div className="space-y-2 mt-2 sm:mt-4 md:mt-5">
           {faqs.map((f, i) => {
             const open = openIndex === i;
             return (
               <div
                 key={i}
-                className="bg-slate-50 rounded-md border border-transparent hover:border-lime-700 transition"
+                className="rounded-md border border-transparent hover:border-lime-700 transition"
               >
                 <button
                   type="button"
                   aria-expanded={open}
                   onClick={() => setOpenIndex(open ? null : i)}
-                  className="w-full flex items-center justify-between px-4 py-4 text-left"
+                  className="w-full flex items-center justify-between px-4 py-3 sm:py-4 text-left"
                 >
-                  <span className="text-green-950 font-medium">{f.q}</span>
+                  <span className="text-green-950 font-medium text-base sm:text-lg">
+                    {f.q}
+                  </span>
                   <ChevronDown
-                    className={`w-5 h-5 text-green-950 transform transition-transform duration-200 ${
-                      open ? "rotate-180" : ""
-                    }`}
+                    className={`w-5 h-5 text-green-950 transform transition-transform duration-200 ${open ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 
                 <div
-                  className={`px-4 overflow-hidden transition-[max-height,opacity] duration-200 ${
-                    open ? "max-h-40 opacity-100 py-2" : "max-h-0 opacity-0"
-                  }`}
+                  className={`px-4 overflow-hidden transition-[max-height,opacity] duration-200 ${open ? "max-h-40 opacity-100 py-2" : "max-h-0 opacity-0"
+                    }`}
                 >
-                  <p className="text-green-950 text-sm leading-relaxed">{f.a}</p>
+                  <p className="text-green-950 text-sm sm:text-base leading-relaxed">
+                    {f.a}
+                  </p>
                 </div>
 
-                {/* bottom divider */}
                 <div className="border-t border-slate-100" />
               </div>
             );
           })}
         </div>
 
-        {/* RIGHT: Illustration / image */}
-        <div className="flex items-center justify-center">
-          <div className="w-full max-w-lg bg-slate-50 rounded-lg overflow-hidden shadow-sm">
-            <img
-              src={imageSrc}
-              alt={imageAlt}
-              className=" object-cover"
-              loading="lazy"
-            />
-            {/* <div className="px-4 py-3">
-              <p className="text-sm text-slate-600">
-                АгроСити төсөл — танилцуулгын зураг. (3D загвар, үйлчилгээ, газрын зураг ба холбогдох мэдээлэл энд байрлана.)
-              </p>
-            </div> */}
-          </div>
+        {/* RIGHT: Image / Illustration */}
+        <div className="w-full max-w-lg mx-auto md:mx-0 bg-slate-50 rounded-lg overflow-hidden shadow-sm mt-6 md:mt-0">
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            className="w-full h-56 sm:h-72 md:h-80 object-cover"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>

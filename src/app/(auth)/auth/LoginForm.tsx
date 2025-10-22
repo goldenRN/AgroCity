@@ -16,6 +16,7 @@ import { useAuth } from '@/app/context/AuthContext';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Loader2 } from 'lucide-react';
+import Link from 'next/link';
 
 const formSchema = z.object({
   email: z.string().min(1, { message: 'Нэвтрэх нэр оруулна уу' }),
@@ -29,90 +30,63 @@ const LoginForm = () => {
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      email: '',
-      password: '',
-    },
+    defaultValues: { email: '', password: '' },
   });
 
   const handleSubmit = async (data: z.infer<typeof formSchema>) => {
-    setLoading(true);
-    try {
-      const response = await fetch('http://localhost:4000/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: data.email,
-          password: data.password,
-        }),
-      });
+    // setLoading(true);
+    // try {
+    //   const response = await fetch('http://localhost:4000/api/auth/login', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify({ email: data.email, password: data.password }),
+    //   });
 
-      if (!response.ok) {
+    //   if (!response.ok) {
+    //     const error = await response.json();
+    //     alert(error.message || 'Нэвтрэхэд амжилтгүй боллоо.');
+    //     return;
+    //   }
 
-        const error = await response.json();
-        alert(error.message || 'Нэвтрэхэд амжилтгүй боллоо.');
-        return;
-      }
-
-      const result = await response.json();
-      const userData = {
-        token: result.token,
-        username: result.username || data.email,
-        role: 'admin',
-      };
-      await localStorage.setItem('user', JSON.stringify(userData));
-      await login(userData);
-      router.push('/admin');
-    } catch (error) {
-      console.error('Login error:', error);
-      alert('Системийн алдаа гарлаа.');
-    } finally {
-      setLoading(false);
-    }
+    //   const result = await response.json();
+    //   const userData = { token: result.token, username: result.username || data.email, role: 'admin' };
+    //   await localStorage.setItem('user', JSON.stringify(userData));
+    //   await login(userData);
+    //   router.push('/admin');
+    // } catch (error) {
+    //   console.error('Login error:', error);
+      alert('Системийн админд хандана уу.');
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-green-50">
-      <Card className="flex md:flex-row bg-white shadow-2xl rounded-2xl overflow-hidden md:w-3/4 lg:w-2/4">
+    <div className="flex justify-center items-center min-h-screen bg-green-50 p-4">
+      <Card className="flex flex-col md:flex-row bg-white shadow-2xl rounded-2xl overflow-hidden w-full max-w-md md:max-w-2xl">
         {/* LEFT PANEL */}
-        <CardHeader className="bg-[#054b13] text-white flex flex-col items-center justify-center w-full md:w-1/3">
-          <div className="flex flex-col items-center">
-            <Image src="/agro_logo.jpg" width={250} height={250} alt="logo" />
-          </div>
-
+        <CardHeader className="bg-[#054b13] text-white flex flex-col items-center justify-center w-full md:w-1/3 p-6 md:p-10">
+          <Image src="/agro_logo.jpg" width={200} height={200} alt="logo" className="object-contain" />
         </CardHeader>
+
         {/* RIGHT PANEL */}
-        <CardContent className="w-full md:w-2/3 p-10 bg-white">
-          <CardTitle className="text-2xl font-bold text-center text-[#054b13]" style={{ fontFamily: 'RobotoBold' }}>
-            {/* <CardTitle className="text-center text-lg mt-5 font-semibold"> */}
+        <CardContent className="w-full md:w-2/3 p-6 md:p-10 bg-white">
+          <CardTitle className="text-2xl md:text-3xl font-bold text-center text-[#054b13] mb-6">
             Удирдлагын системд нэвтрэх
-            {/* </CardTitle> */}
           </CardTitle>
 
           <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(handleSubmit)}
-              className="space-y-8 pt-8"
-            >
+            <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
               <FormField
                 control={form.control}
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-green-950 text-lg" style={{ fontFamily: 'RobotoBold' }}>
-                      Нэвтрэх нэр
-                    </FormLabel>
+                    <FormLabel className="text-green-950 text-base md:text-lg">Нэвтрэх нэр</FormLabel>
                     <FormControl>
-                      <Input
-                        placeholder="Нэвтрэх нэр"
-                        {...field}
-                        className="border-[#9bb0d6] focus-visible:ring-[#1d3b86]"
-                        style={{ fontFamily: 'RobotoBold' }}
-                      />
+                      <Input {...field} placeholder="Нэвтрэх нэр" />
                     </FormControl>
-                    <FormMessage className="text-red-600" />
+                    <FormMessage className="text-red-600 text-sm" />
                   </FormItem>
                 )}
               />
@@ -122,19 +96,11 @@ const LoginForm = () => {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-green-950 text-lg" style={{ fontFamily: 'RobotoBold' }}>
-                      Нууц үг
-                    </FormLabel>
+                    <FormLabel className="text-green-950 text-base md:text-lg">Нууц үг</FormLabel>
                     <FormControl>
-                      <Input
-                        type="password"
-                        placeholder="Нууц үг"
-                        {...field}
-                        className="border-[#9bb0d6] focus-visible:ring-[#1d3b86]"
-                        style={{ fontFamily: 'RobotoBold' }}
-                      />
+                      <Input {...field} type="password" placeholder="Нууц үг" />
                     </FormControl>
-                    <FormMessage className="text-red-600" />
+                    <FormMessage className="text-red-600 text-sm" />
                   </FormItem>
                 )}
               />
@@ -143,31 +109,28 @@ const LoginForm = () => {
                 type="submit"
                 disabled={loading}
                 className="w-full bg-gradient-to-r from-[#d49943] to-[#edad45] hover:opacity-90 transition-all duration-200 text-white py-2 text-lg"
-                style={{ fontFamily: 'RobotoBold' }}>
+              >
                 {loading ? (
-                  <div className="flex items-center justify-center gap-2" style={{ fontFamily: 'RobotoBold' }}>
+                  <div className="flex items-center justify-center gap-2">
                     <Loader2 className="animate-spin h-4 w-4" />
                     Нэвтэрч байна...
                   </div>
-                ) : (
-                  'Нэвтрэх'
-                )}
+                ) : 'Нэвтрэх'}
               </Button>
             </form>
           </Form>
-          <div className='md:flex-row text-center pt-5'>
-            <CardDescription className="text-green-950 mt-2 text-sm text-center" style={{ fontFamily: 'RobotoBold' }}>
-              Системд нэвтрэх эрх үүсгэх бол
+
+          <div className="mt-4 text-center text-sm md:text-base">
+            <CardDescription className="text-green-950">
+              Системд нэвтрэх эрх үүсгэх бол{' '}
+              <Link href="/register" className="underline font-medium text-green-900">
+                Бүртгүүлэх
+              </Link>
             </CardDescription>
-            <a href='/register'>
-              {/* <Link href={item.url}> */}
-              {/* <item.icon /> */}
-              <span style={{ fontFamily: 'RobotoBold' }}>Бүртгүүлэх</span>
-            </a>
           </div>
         </CardContent>
       </Card>
-    </div >
+    </div>
   );
 };
 
