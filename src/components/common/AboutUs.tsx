@@ -2,7 +2,7 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Sprout, EyeIcon, Gem } from 'lucide-react'
+import { Sprout, EyeIcon,  FlagIcon} from 'lucide-react'
 
 export default function AboutUs() {
   return (
@@ -22,10 +22,13 @@ export default function AboutUs() {
         */}
 
         <h1 className="text-2xl sm:text-3xl md:text-4xl text-green-950 uppercase font-semibold">
-          Бидний тухай
+          Төслийн тухай
         </h1>
         <div className="flex justify-center">
-          <p className="text-base sm:text-lg mt-6 sm:mt-10 text-green-950 max-w-xl sm:max-w-3xl text-center leading-relaxed">
+          <p className="text-base text-lg mt-6 sm:mt-10 text-green-950 max-w-xl sm:max-w-4xl text-center leading-relaxed">
+            Энэхүү системийг ашигласнаар газрын эзэмшил, ашиглалтын нөхцөл байдлыг бодит цаг хугацаанд хянах, дэд бүтцийн байршил, нөхцөл байдлыг харьцуулан шинжлэх, төсөл, хөтөлбөрийн төлөвлөлт, хөрөнгө оруулалтын шийдвэрийг нотолгоонд тулгуурлан гаргах, орчны судалгаа, дүн шинжилгээ хийх зэрэг ач холбогдолтой.
+
+            Ингэснээр тусгай бүсийн газар ашиглалт, төлөвлөлт, хөрөнгө оруулалтын удирдлагыг илүү оновчтой, ил тод байдлаар хэрэгжүүлэх суурь нөхцөл бүрдэнэ.
             Сонгинохайрхан дүүргийн засаг даргын тамгын газрын{" "}
             <strong>АГРО-СИТИ</strong> платформ нь оршин суугчдын санал гомдлыг хурдан шийдвэрлэх,
             хотын дэд бүтцийг илүү ил тод, үр ашигтай удирдах зорилготой.
@@ -43,12 +46,10 @@ export default function AboutUs() {
             className="mx-auto text-white mb-4 transition-transform duration-300 group-hover:scale-110"
           />
           <h3 className="text-lg sm:text-xl text-white mb-5 sm:mb-7 uppercase tracking-wide">
-            Зорилго
+            Эрхэм зорилго
           </h3>
           <p className="text-white leading-relaxed text-sm sm:text-base">
-            “АГРО-СИТИ” эдийн засгийн тусгай бүс нь Улаанбаатар хотын хүнсний ногооны хэрэглээг дотооддоо хангах,
-            импортыг орлох бүтээгдэхүүнийг бий болгох үндсэн зорилготой.
-          </p>
+            Хүнс, хөдөө аж ахуйн үйлдвэрлэлийг дэмжих замаар импортыг орлох чанар, стандартад нийцсэн, эрүүл аюулгүй хүнсээр дотоодын хэрэгцээг хангах, хүнсний үйлдвэрлэлийг кластераар хөгжүүлэх бизнесийн таатай орчныг бүрдүүлж, экспортыг дэмжин эдийн засагт эерэг нөлөө үзүүлэх</p>
         </div>
 
         {/* Алсын хараа */}
@@ -61,31 +62,35 @@ export default function AboutUs() {
             Алсын хараа
           </h3>
           <p className="text-white  leading-relaxed text-sm sm:text-base">
-            Дүүрэг тэргүүлэгч, дижитал шийдэлд суурилсан иргэдэд ээлтэй засаг захиргаа болох.
+            Монгол Улсын хүнсний хангамжийг тогтвортой хангаж, экспортын чадавхыг нэмэгдүүлсэн, ногоон технологид суурилсан олон улсын стандартад нийцсэн үйлдвэрлэлийн бүс болох.
+
           </p>
         </div>
 
         {/* Үнэт зүйлс */}
         <div className="group p-6 sm:p-8 bg-lime-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
-          <Gem
+          <FlagIcon
             size={50}
             className="mx-auto text-white mb-4 transition-transform duration-300 group-hover:scale-110"
           />
           <h3 className="text-lg sm:text-xl text-white mb-5 sm:mb-7 uppercase tracking-wide">
-            Үнэт зүйлс
+            Уриа
           </h3>
-          <ul className="text-white  space-y-2 text-sm sm:text-base">
+          <p className="text-white  leading-relaxed text-sm sm:text-base">
+            Эрүүл, тогтвортой хүнс
+          </p>
+
+          {/* <ul className="text-white  space-y-2 text-sm sm:text-base">
             <li className="hover:text-lime-200 transition-colors duration-200">Ил тод байдал</li>
             <li className="hover:text-lime-200 transition-colors duration-200">Үр ашигтай шийдвэр</li>
             <li className="hover:text-lime-200 transition-colors duration-200">Харилцан хүндлэл</li>
-          </ul>
+          </ul> */}
         </div>
       </section>
 
       {/* --- Stats Section --- */}
-      <section className="mb-12 bg-gradient-to-r from-slate-50 via-green-50 to-slate-50 p-6 border-y border-lime-200 rounded-lg">
-        {/* <div className="max-w-7xl flex itemgrid grid-cols-1 sm:grid-cols-3 gap-6 text-center"> */}
-      <nav className="max-w-7xl mx-auto w-full text-center px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 ">
+      {/* <section className="mb-12 bg-gradient-to-r from-slate-50 via-green-50 to-slate-50 p-6 border-y border-lime-200 rounded-lg">
+        <nav className="max-w-7xl mx-auto w-full text-center px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 ">
 
           <div>
             <div className="text-2xl sm:text-3xl text-green-950">1,200+</div>
@@ -105,10 +110,9 @@ export default function AboutUs() {
               Туршлага
             </div>
           </div>
-           </nav>
-        {/* </div> */}
-       
-      </section>
+        </nav>
+
+      </section> */}
     </main>
   )
 }

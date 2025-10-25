@@ -96,20 +96,20 @@ export default function Services() {
       image: "/service1.jpg",
     },
     {
-      title: "AI өгөгдөлд суурилсан дүн шинжилгээ",
-      desc: "Аналитик загвар ашиглан ургацын төлөв, эрсдэлийн оношлогоо, усны хэрэглээний таамаглал гаргана.",
+      title: "AI Аналитик",
+      desc: "Өгөгдөлд суурилсан аналитик загвар ашиглан ургацын төлөв, усны хэрэглээ, эрсдэлийн таамаглалыг боловсруулна.",
       icon: "/icons/ai-analytics.png",
       image: "/service2.jpg",
     },
     {
       title: "IoT мэдрэгчийн сүлжээ",
-      desc: "Хөрсний чийг, температур, агаарын чанарыг бодит цагийн горимоор хэмжин, серверт илгээнэ.",
+      desc: "Хөрсний чийг, температур, агаарын чанарыг бодит цагт хэмжиж, серверт автоматаар илгээнэ.",
       icon: "/icons/iot.png",
       image: "/service3.jpg",
     },
     {
-      title: "Газар тариалангийн хяналт",
-      desc: "Дрон, хиймэл дагуулын зураглал ашиглан тариалангийн явцыг хянах, алсаас удирдах систем.",
+      title: "2D Газрын Зураг",
+      desc: "Эдийн засгийн тусгай бүсийн дижитал газрын зураг нь бүх мэдээллийг нэг дороос харах, төлөвлөлтөд ашиглах ухаалаг шийдэл юм.",
       icon: "/icons/drone.png",
       image: "/service4.jpg",
     },
@@ -120,7 +120,7 @@ export default function Services() {
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-4 uppercase leading-snug">
-          Агро-Сити төслийн үйлчилгээ
+          Танилцуулга
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-gray-700 mx-auto leading-relaxed">
           Агро-Сити нь хөдөө аж ахуйн орон зайн дижитал шийдлийг нэвтрүүлж, өгөгдөлд суурилсан шийдвэр
@@ -129,7 +129,7 @@ export default function Services() {
       </div>
 
       {/* Service cards */}
-      <section className=" max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20 justify-between  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      <section className=" max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-5  justify-between  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
       {/* <nav className=" flex-row px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20 justify-between  "> */}
         
         {services.map((srv, i) => (

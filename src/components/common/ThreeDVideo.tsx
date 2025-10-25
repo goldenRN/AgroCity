@@ -1,47 +1,57 @@
-
-
-
-
 'use client'
 
 import React, { Suspense, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { Loader2 } from 'lucide-react'
 
-// FBX model component (динамикаар дуудах)
+// ✅ 3D model component dynamic import
 const LoadFBXModel = dynamic(() => import('../MapClient3D/LoadFBXModel'), { ssr: false })
 
 const ThreeDVideo = () => {
-  const [selectedModel, setSelectedModel] = useState<'geo' | 'infra' | 'agri'>('geo')
+  const [selectedModel, setSelectedModel] = useState<
+    'ezemshil' | 'zam' | 'us' | 'ondor' | 'dg' | 'gh' | 'crolo' | 'morph'
+  >('ezemshil')
 
   const modelFiles: Record<typeof selectedModel, string> = {
-    geo: '/models/webtest02.fbx',
-    infra: '/models/nogoon_baiguulamj.fbx',
-    agri: '/models/test10.fbx',
+    ezemshil: '/models/ezemshil112.fbx',
+    zam: '/models/zam11.fbx',
+    us: '/models/usniih.fbx',
+    ondor: '/models/undurlugGAZR1.fbx',
+    dg: '/models/dursgalt_GAZR.fbx',
+    gh: '/models/gazar hudlult.fbx',
+    crolo: '/models/geocrolo.fbx',
+    morph: '/models/geomorph.fbx',
   }
 
   const tabs = [
-    { key: 'geo', label: 'Газар зүйн давхрага' },
-    { key: 'infra', label: 'Дэд бүтэц' },
-    { key: 'agri', label: 'Хөдөө аж ахуй' },
+    { key: 'ezemshil', label: 'Эзэмшил газар', isShow: true },
+    { key: 'zam', label: 'Зам дэд бүтэц', isShow: true },
+    { key: 'us', label: 'Ус', isShow: false },
+    { key: 'ondor', label: 'Өндөрлөг бүс', isShow: true },
+    { key: 'dg', label: 'Дурсгалт газар', isShow: true },
+    { key: 'gh', label: 'Газар хөдлөлт', isShow: false },
+    { key: 'crolo', label: 'Geocrolo', isShow: true },
+    { key: 'morph', label: 'Geomorph', isShow: true },
   ] as const
 
   return (
-    <section className="relative max-w-7xl mx-auto bg-slate-50  ">
-      {/* Гарчиг */}
-      <div className="text-center max-w-3xl mx-auto mb-10">
+    <section className="relative max-w-7xl mx-auto bg-slate-50">
+      {/* 🟢 Гарчиг */}
+      <div className="text-center max-w-4xl mx-auto mb-10">
         <h1 className="text-2xl md:text-3xl lg:text-4xl text-green-950 uppercase mb-4 tracking-wide">
           АГРО-СИТИ 3D загвар
         </h1>
         <p className="text-sm md:text-base lg:text-lg text-green-950 leading-relaxed">
-          АГРО-СИТИ-ийн 3D дижитал ихэр нь ухаалаг хөдөө аж ахуйн орон зайн шийдвэр гаргах шинэ түвшнийг нээж өгнө.
-          Бодит мэдээлэлд тулгуурлан төлөвлө, дүн шинжил, эрсдэлээ бууруул.
+          <strong>3D дижитал ихэр систем</strong> нь бодит орчин, объект, систем, үйл явц эсвэл байгууллагын{' '}
+          <strong>бодит цагийн</strong> эсвэл <strong>ойролцоо бодит орчныг гурван хэмжээст орчинд бүрэн дуурайлган</strong>{' '}
+          загварчлан бий болгож, хянах, шинжлэх, оновчлох зорилготой{' '}
+          <strong>дэвшилтэт мэдээллийн технологийн шийдэл</strong> юм.
         </p>
       </div>
 
-      {/* 3D Model хэсэг */}
-      <div className="flex flex-col items-center sm:px-4 md:px-6 lg:px-8 justify-between ">
-        <div className="max-w-7xl w-full  h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] shadow-lg flex items-center justify-center overflow-hidden">
+      {/* 🟢 3D Model хэсэг */}
+      <div className="flex flex-col items-center sm:px-4 md:px-6 lg:px-8 justify-between">
+        <div className="max-w-7xl w-full h-[400px] sm:h-[500px] md:h-[600px] shadow-lg flex items-center justify-center overflow-hidden bg-white">
           <Suspense
             fallback={
               <div className="flex items-center justify-center text-green-800">
@@ -53,21 +63,23 @@ const ThreeDVideo = () => {
           </Suspense>
         </div>
 
-        {/* Доорх 3 таб */}
-        <div className="max-w-7xl flex flex-col md:flex-row justify-center  border-t border-slate-200 items-stretch w-full max-w-6xl mx-auto text-green-950 text-sm sm:text-base md:text-lg ">
-          {tabs.map((tab) => (
-            <button
-              key={tab.key}
-              onClick={() => setSelectedModel(tab.key)}
-              className={`flex-1 py-3 sm:py-4 px-4 sm:px-6 text-center transition-all duration-300
-                ${selectedModel === tab.key
-                  ? 'bg-lime-700 text-white border-b-4 border-lime-700'
-                  : 'bg-slate-100 hover:bg-slate-200'
+        {/* 🟢 Доорх табууд */}
+        <div className="flex flex-wrap justify-center border-t border-slate-200 w-full max-w-6xl text-green-950 text-sm sm:text-base md:text-lg">
+          {tabs
+            .filter((tab) => tab.isShow)
+            .map((tab) => (
+              <button
+                key={tab.key}
+                onClick={() => setSelectedModel(tab.key)}
+                className={`flex-1 py-3 sm:py-4 px-4 sm:px-6 text-center transition-all duration-300 ${
+                  selectedModel === tab.key
+                    ? 'bg-lime-700 text-white border-b-4 border-lime-700'
+                    : 'bg-slate-100 hover:bg-slate-200'
                 }`}
-            >
-              {tab.label}
-            </button>
-          ))}
+              >
+                {tab.label}
+              </button>
+            ))}
         </div>
       </div>
     </section>

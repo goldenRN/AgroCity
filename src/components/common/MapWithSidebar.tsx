@@ -37,12 +37,11 @@ export default function MapWithSidebar({ geojson }: { geojson: any }) {
             {/* Гарчиг */}
             <div className="text-center max-w-3xl mx-auto mb-10">
                 <h1 className="text-3xl md:text-4xl text-green-950 uppercase mb-4 tracking-wide">
-                    АГРО-СИТИ 2D газрын зураг
+                    “АГРО-СИТИ”
+                    2D загвар
                 </h1>
                 <p className="text-base md:text-lg text-green-950 leading-relaxed">
-                    АГРО-СИТИ эдийн засгийн тусгай бүсийн дижитал ихэр хот нь ухаалаг хөдөө аж ахуйн орон зайн шийдвэр гаргах шинэ түвшнийг нээж өгнө.
-                    Бодит мэдээлэлд тулгуурлан төлөвлө, дүн шинжил, эрсдэлээ бууруул.
-                </p>
+                    <strong>“АГРО-СИТИ”  эдийн засгийн тусгай бүсийн платформ нь </strong>хот байгуулалтын ерөнхий төлөвлөгөө, дэд бүтцийн зураглал, газар зохион байгуулалтын бүсчлэл-ийг хоёр хэмжээст (2D) хэлбэрээр харуулсан зураглал эсвэл төлөвлөлтийн зураг юм. </p>
             </div>
             {/* <div className="grid grid-cols-1 md:grid-cols-5 gap-5 pl-50 pr-50"> */}
             {/* Map + Sidebar container */}
@@ -70,7 +69,7 @@ export default function MapWithSidebar({ geojson }: { geojson: any }) {
                         ))}
                     </ul>
                 </div>
-               
+
                 {/* Map */}
                 <div className="col-span-1 md:col-span-4 bg-white shadow-lg h-[400px] sm:h-[500px] md:h-[700px] relative">
                     <GeojsonMap data={geojson} colorMap={colorMap} selectedName={selectedName} />

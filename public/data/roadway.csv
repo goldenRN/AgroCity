@@ -1,0 +1,10 @@
+FID,Name,descriptio,timestamp,begin,end,altitudeMo,tessellate,extrude,visibility,drawOrder,icon
+0,road 1, , , , , ,1,0,-1,0, 
+1,road 3, , , , , ,1,0,-1,0, 
+2,road 4, , , , , ,1,0,-1,0, 
+3,road 6, , , , , ,1,0,-1,0, 
+4,road 7, , , , , ,1,0,-1,0, 
+5,road 8, , , , , ,1,0,-1,0, 
+6,road 9, , , , , ,1,0,-1,0, 
+7,road 10, , , , , ,1,0,-1,0, 
+8, , , , , , ,0,0,0,0, 

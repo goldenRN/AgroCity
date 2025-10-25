@@ -12,8 +12,7 @@ export default function Navbar() {
 
   const menuItems = [
     { label: 'Төслийн тухай', href: '/#about' },
-    { label: 'Үйлчилгээ', href: '/#services' },
-    { label: 'Хууль эрх зүй', href: '/#law' },
+    { label: 'Танилцуулга', href: '/#services' },
     { label: 'Санал хүсэлт', href: '/feedback' },
   ];
 

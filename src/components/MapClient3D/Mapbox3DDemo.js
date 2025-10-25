@@ -19,7 +19,7 @@ export default function Mapbox3DDemo({ data }) {
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/light-v11",
       center: [106.697, 48.18],
-      zoom: 13,
+      zoom: 10,
       pitch: 60,
       bearing: -17.6,
       antialias: true,
