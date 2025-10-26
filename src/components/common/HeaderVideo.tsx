@@ -151,16 +151,16 @@ const ThreeDVideo = () => {
             {/* --- Left text section --- */}
             <nav className="max-w-7xl  mx-auto w-full sm:px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 ">
 
-                <div className="w-full md:w-2/5 mx-auto md:pt-20 pb-8 relative bg-green-50">
+                <div className="w-full md:w-2/5 mx-auto md:pt-20 pb-8 relative bg-green-50 my-10">
                     <div className="flex mx-4 flex-col items-start text-left md:pr-10">
                         <h1 className="text-3xl md:text-5xl text-black uppercase">
                             “АГРО-СИТИ”
                         </h1>
                         <p className="text-lg md:text-2xl text-green-950 pt-3">
-                            эдийн засгийн тусгай бүсийн платформ
+                            Эдийн засгийн тусгай бүсийн платформ
                         </p>
                         <p className="mt-4 text-lg md:text-lg text-green-950 text-justify max-w-full md:max-w-md">
-                            Дижитал ихэр хот гэдэг нь , суурин газрын бодит орчныг дижитал орчинд яг ижил загвараар (ихэр хувилбараар) бий болгож, бодит цагийн мэдээлэл дээр үндэслэн загварчлах, хянах, удирдах ухаалаг технологийн шийдэл юм.
+                            Дижитал ихэр хот гэдэг нь, суурин газрын бодит орчныг дижитал орчинд яг ижил загвараар (ихэр хувилбараар) бий болгож, бодит цагийн мэдээлэл дээр үндэслэн загварчлах, хянах, удирдах ухаалаг технологийн шийдэл юм.
 
                             Агро-Сити эдийн засгийн тусгай бүсийн 3D/2D газрын зураг нь орон зайн бодит өгөгдөл, өмчлөлийн бүртгэл, дэд бүтцийн мэдээлэл, байгаль орчны бүх өгөгдлийг нэгтгэсэн интерактив гео мэдээллийн систем юм.</p>
 

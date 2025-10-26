@@ -63,7 +63,7 @@ https://www.instagram.com/agrocitysez?igsh=c25rZHVvcmNzbmV6" className="text-pin
                 </div>
 
                 {/* Холбоосууд */}
-                <div className="text-left pl-0 md:pl-10">
+                <div className="text-left pl-0 md:pl-20">
                     <h3 className="text-xl text-green-950 mb-5">Холбоосууд</h3>
                     <ul className="text-base text-green-950 list-disc list-inside space-y-1">
                         <li>

@@ -71,7 +71,7 @@ export default function FAQSectionAgroCity({
                   onClick={() => setOpenIndex(open ? null : i)}
                   className="w-full flex items-center justify-between px-4 py-3 sm:py-4 text-left"
                 >
-                  <span className="text-green-950 font-medium text-base sm:text-lg">
+                  <span className="text-green-950 font-medium text-base sm:text-md">
                     {f.q}
                   </span>
                   <ChevronDown
@@ -96,7 +96,7 @@ export default function FAQSectionAgroCity({
         </div>
 
         {/* RIGHT: Image / Illustration */}
-        <div className="w-full max-w-lg mx-auto md:mx-0 bg-slate-50 rounded-lg overflow-hidden shadow-sm mt-6 md:mt-0">
+        <div className="w-full max-w-lg mx-auto md:mx-0 my-5 bg-slate-50 rounded-lg overflow-hidden shadow-sm ">
           <img
             src={imageSrc}
             alt={imageAlt}

@@ -30,8 +30,8 @@ const ThreeDVideo = () => {
     { key: 'ondor', label: 'Өндөрлөг бүс', isShow: true },
     { key: 'dg', label: 'Дурсгалт газар', isShow: true },
     { key: 'gh', label: 'Газар хөдлөлт', isShow: false },
-    { key: 'crolo', label: 'Geocrolo', isShow: true },
-    { key: 'morph', label: 'Geomorph', isShow: true },
+    { key: 'crolo', label: 'Геокриологи', isShow: true },
+    { key: 'morph', label: 'Геоморфологи', isShow: true },
   ] as const
 
   return (
@@ -64,14 +64,14 @@ const ThreeDVideo = () => {
         </div>
 
         {/* 🟢 Доорх табууд */}
-        <div className="flex flex-wrap justify-center border-t border-slate-200 w-full max-w-6xl text-green-950 text-sm sm:text-base md:text-lg">
+        <div className="flex flex-wrap justify-center border-t border-slate-200 w-full max-w-7xl text-green-950 text-sm sm:text-base md:text-lg">
           {tabs
             .filter((tab) => tab.isShow)
             .map((tab) => (
               <button
                 key={tab.key}
                 onClick={() => setSelectedModel(tab.key)}
-                className={`flex-1 py-3 sm:py-4 px-4 sm:px-6 text-center transition-all duration-300 ${
+                className={`flex-1 py-3 sm:py-4 text-center transition-all duration-300 ${
                   selectedModel === tab.key
                     ? 'bg-lime-700 text-white border-b-4 border-lime-700'
                     : 'bg-slate-100 hover:bg-slate-200'

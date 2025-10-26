@@ -2,7 +2,7 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Sprout, EyeIcon,  FlagIcon} from 'lucide-react'
+import { Sprout, EyeIcon, FlagIcon } from 'lucide-react'
 
 export default function AboutUs() {
   return (
@@ -79,12 +79,7 @@ export default function AboutUs() {
           <p className="text-white  leading-relaxed text-sm sm:text-base">
             Эрүүл, тогтвортой хүнс
           </p>
-
-          {/* <ul className="text-white  space-y-2 text-sm sm:text-base">
-            <li className="hover:text-lime-200 transition-colors duration-200">Ил тод байдал</li>
-            <li className="hover:text-lime-200 transition-colors duration-200">Үр ашигтай шийдвэр</li>
-            <li className="hover:text-lime-200 transition-colors duration-200">Харилцан хүндлэл</li>
-          </ul> */}
+          <p className="text-white  leading-relaxed text-sm sm:text-base mt-5">Ногоон технологид тулгуурласан, эрүүл, чанартай хүнсийг үйлдвэрлэж, тогтвортой хэрэглээг дэмжин, Монгол хүний эрүүл мэнд, улс орны эдийн засгийн бат бөх ирээдүйг хамтдаа бүтээнэ.</p>
         </div>
       </section>
 

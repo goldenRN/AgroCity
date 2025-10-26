@@ -19,7 +19,7 @@ export default function FeedbackSection() {
   };
 
   return (
-    <section className="bg-gradient-to-b from-white to-green-50 py-16 px-6 md:px-20">
+    <section className=" py-16 px-6 md:px-20">
       <div className="max-w-3xl mx-auto text-center">
         <h2
           className="text-4xl md:text-4xl text-green-950 mb-4 uppercase"

@@ -6,21 +6,21 @@ import { useState } from 'react'
 export default function ProductGallery() {
   // Зургуудын жагсаалт
   const images = [
-    '/images/1.png',
-    '/images/2.png',
-    '/images/3.png',
-    '/images/4.png',
-    '/images/5.png',
-    '/images/6.png',
-    '/images/7.png',
-    '/images/8.png',
-    '/images/9.png',
+    '/images/1.JPG',
+    '/images/2.JPG',
+    '/images/3.JPG',
+    '/images/4.JPG',
+    '/images/5.JPG',
+    '/images/6.JPG',
+    // '/images/7.png',
+    // '/images/8.png',
+    // '/images/9.png',
   ]
 
   const [selected, setSelected] = useState(0)
 
   return (
-    <div className="flex flex-col items-center gap-4 w-full max-w-[900px] mx-auto">
+    <div className="flex flex-col items-center gap-4 sm:px-6 w-full max-w-[900px] mx-auto">
       {/* --- Том зураг --- */}
       <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-md">
         <Image
@@ -38,8 +38,8 @@ export default function ProductGallery() {
           <button
             key={i}
             onClick={() => setSelected(i)}
-            className={`relative w-28 h-20 rounded-md overflow-hidden border-2 transition 
-              ${selected === i ? 'border-blue-500' : 'border-transparent hover:border-gray-300'}`}
+            className={`relative w-28 h-20 rounded-md overflow-hidden border-3 transition 
+              ${selected === i ? 'border-lime-700' : 'border-transparent hover:border-gray-300'}`}
           >
             <Image
               src={src}
